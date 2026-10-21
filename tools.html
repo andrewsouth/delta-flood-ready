@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A rural flood early-warning pilot for Delta, Utah, with illustrative mockups of the public brief, map, program website, and library disaster corner.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Tools, Spaces, and Places</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one readable column of explanation, with each mockup set on its own "paper" surface that keeps its printed look in either theme */
+:root{
+  --bg:#FFFFFF; --ink:#1F1F1F; --navy:#002E5D; --gray:#4A4A4A; --rule:#D5D7D9; --royal:#0047BA; --slate:#7C878E; --panel:#F4F6F8;
+  --paper:#FFFFFF; --paper-ink:#1F1F1F; --paper-navy:#002E5D; --paper-gray:#4A4A4A; --paper-rule:#D5D7D9; --paper-soft:#F4F6F8;
+  --water:#2F6DB5; --flood:#0047BA; --land:#EEF0EC; --town:#D9DCDF; --road:#9AA3AA; --canal:#5B8FC9;
+  --t-standing:#5F6B73; --t-outlook:#0047BA; --t-watch:#9A5B00; --t-warning:#B42318;
+  --head:Georgia,"Times New Roman",serif; --body:Arial,Helvetica,sans-serif;
+  --shadow:0 1px 2px rgba(0,0,0,.08),0 6px 24px rgba(0,30,60,.08);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1620; --ink:#E6E9EC; --navy:#9CC0EA; --gray:#AAB3BB; --rule:#2C3A48; --royal:#8DB4F0; --slate:#8F9AA3; --panel:#152130;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 24px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1620; --ink:#E6E9EC; --navy:#9CC0EA; --gray:#AAB3BB; --rule:#2C3A48; --royal:#8DB4F0; --slate:#8F9AA3; --panel:#152130;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 24px rgba(0,0,0,.35); color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--head);color:var(--navy);text-wrap:balance;line-height:1.25;margin:0}
+h1{font-size:2rem}
+h2{font-size:1.45rem;margin-bottom:.4rem}
+h3{font-size:1.1rem}
+p{margin:0}
+.lede{color:var(--gray);font-size:1.05rem;max-width:68ch;margin-top:.6rem}
+.prose{max-width:68ch;display:grid;gap:.8rem}
+section{display:grid;gap:1.1rem;margin-top:56px}
+.caption{color:var(--gray);font-size:.85rem}
+.note{font-size:.85rem;color:var(--gray);border-left:3px solid var(--rule);padding-left:.75rem;max-width:68ch}
+a{color:var(--royal)}
+
+/* tools, spaces, places */
+.tsp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tsp > div{background:var(--panel);border-radius:8px;padding:18px 18px 20px;display:grid;gap:.7rem;align-content:start;min-width:0}
+.tsp h3{display:flex;align-items:baseline;gap:.5rem}
+.tsp .kicker{font-family:var(--body);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);font-weight:700}
+.tsp ul{list-style:none;padding:0;margin:0;display:grid;gap:.65rem}
+.tsp li{font-size:.92rem;line-height:1.45}
+.tsp li b{color:var(--ink)}
+.tsp li span{display:block;color:var(--gray);font-size:.84rem}
+
+/* mock frame */
+.mock{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start}
+.mock.single{grid-template-columns:minmax(0,1fr)}
+.mock .side{display:grid;gap:.8rem;min-width:0}
+.mock .side ul{margin:0;padding-left:1.1rem;display:grid;gap:.4rem;font-size:.93rem}
+.paper{background:var(--paper);color:var(--paper-ink);box-shadow:var(--shadow);border:1px solid var(--paper-rule);border-radius:4px;min-width:0}
+.paper h1,.paper h2,.paper h3,.paper h4{color:var(--paper-navy)}
+
+/* bulletin */
+.bulletin{padding:26px 26px 20px;display:grid;gap:14px;font-size:13px;line-height:1.45}
+.b-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.b-org{font-size:11px;color:var(--paper-gray);text-transform:uppercase;letter-spacing:.07em;font-weight:700}
+.tierchip{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;color:#fff;white-space:nowrap}
+.tierchip.watch{background:var(--t-watch)} .tierchip.outlook{background:var(--t-outlook)} .tierchip.warning{background:var(--t-warning)} .tierchip.standing{background:var(--t-standing)}
+.ladder{display:flex;gap:4px;margin-top:6px}
+.ladder span{font-size:9.5px;padding:2px 6px;border-radius:3px;background:var(--paper-soft);color:var(--paper-gray);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.ladder span.on{background:var(--t-watch);color:#fff}
+.b-head{font-family:var(--head);font-size:21px;font-weight:700;color:var(--paper-navy);line-height:1.2;text-wrap:balance}
+.b-map svg{width:100%;height:auto;display:block;border:1px solid var(--paper-rule);border-radius:3px}
+.b-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.b-cols h4{font-family:var(--head);font-size:13.5px;margin-bottom:4px}
+.b-cols ul{margin:0;padding-left:1rem;display:grid;gap:3px}
+.b-es{border-top:1px solid var(--paper-rule);padding-top:10px;display:grid;gap:6px}
+.b-es .b-heades{font-family:var(--head);font-weight:700;color:var(--paper-navy);font-size:15px}
+.b-foot{display:flex;gap:14px;align-items:center;border-top:1px solid var(--paper-rule);padding-top:10px;font-size:11px;color:var(--paper-gray)}
+.qr{width:62px;height:62px;flex:none}
+
+/* sms */
+.phone{max-width:330px;width:100%;padding:16px;border-radius:26px;background:var(--paper);border:1px solid var(--paper-rule);box-shadow:var(--shadow);display:grid;gap:10px;color:var(--paper-ink)}
+.phone .from{text-align:center;font-size:12px;color:var(--paper-gray)}
+.bubble{background:var(--paper-soft);border-radius:16px 16px 16px 4px;padding:10px 12px;font-size:13.5px;line-height:1.45}
+
+/* website mock */
+.site{overflow:hidden}
+.site-bar{display:flex;gap:6px;align-items:center;padding:9px 12px;background:var(--paper-soft);border-bottom:1px solid var(--paper-rule);font-size:12px;color:var(--paper-gray)}
+.site-bar i{width:9px;height:9px;border-radius:50%;background:var(--paper-rule);display:block}
+.site-bar .url{margin-left:8px;background:var(--paper);border:1px solid var(--paper-rule);border-radius:4px;padding:2px 10px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.site-nav{display:flex;flex-wrap:wrap;gap:4px 18px;padding:12px 20px;border-bottom:1px solid var(--paper-rule);font-size:13px;align-items:baseline}
+.site-nav .brand{font-family:var(--head);font-weight:700;color:var(--paper-navy);font-size:16px;margin-right:auto}
+.site-nav span.cur{color:var(--paper-navy);font-weight:700;border-bottom:2px solid var(--paper-navy)}
+.site-body{padding:20px;display:grid;gap:22px;font-size:14px}
+.tierbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.tierbar button{font:inherit;font-size:12.5px;font-weight:700;padding:9px 6px;border-radius:5px;border:1px solid var(--paper-rule);background:var(--paper);color:var(--paper-gray);cursor:pointer;text-align:center}
+.tierbar button[aria-pressed="true"]{color:#fff;border-color:transparent}
+.tierbar button[data-t="standing"][aria-pressed="true"]{background:var(--t-standing)}
+.tierbar button[data-t="outlook"][aria-pressed="true"]{background:var(--t-outlook)}
+.tierbar button[data-t="watch"][aria-pressed="true"]{background:var(--t-watch)}
+.tierbar button[data-t="warning"][aria-pressed="true"]{background:var(--t-warning)}
+.tierbar button:focus-visible,.site input:focus-visible,.site select:focus-visible,.site textarea:focus-visible,.btn:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
+.tierdesc{background:var(--paper-soft);border-radius:6px;padding:12px 14px;font-size:13.5px}
+.tierdesc b{color:var(--paper-navy)}
+.cardrow{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+.panel{border:1px solid var(--paper-rule);border-radius:6px;padding:14px;display:grid;gap:8px;min-width:0}
+.panel h4{font-family:var(--head);font-size:14.5px}
+.panel .sub{font-size:12px;color:var(--paper-gray)}
+.chart svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--paper-gray)}
+.legend i{display:inline-block;width:14px;height:8px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.bars{display:grid;gap:10px;font-size:12.5px}
+.bar{display:grid;gap:3px}
+.bar .row{display:flex;justify-content:space-between;gap:8px;font-variant-numeric:tabular-nums}
+.bar .track{height:9px;background:var(--paper-soft);border-radius:5px;overflow:hidden}
+.bar .fill{height:100%;background:var(--water);border-radius:5px}
+.confidence{font-size:13px;display:grid;gap:6px}
+.slider{display:grid;gap:6px}
+.slider input{width:100%;accent-color:#0047BA}
+.slider .ticks{display:flex;justify-content:space-between;font-size:11.5px;color:var(--paper-gray);font-variant-numeric:tabular-nums}
+.mapbox svg{width:100%;height:auto;display:block;border:1px solid var(--paper-rule);border-radius:4px}
+.mapnote{font-size:13px;background:var(--paper-soft);border-radius:6px;padding:10px 12px}
+form.report{display:grid;gap:10px;font-size:13px}
+form.report .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form.report label{display:grid;gap:4px;color:var(--paper-gray);font-size:12px}
+form.report select,form.report input,form.report textarea{font:inherit;font-size:13.5px;padding:7px 9px;border:1px solid var(--paper-rule);border-radius:4px;background:var(--paper);color:var(--paper-ink)}
+.btn{font:inherit;font-weight:700;font-size:13px;background:#002E5D;color:#fff;border:0;border-radius:5px;padding:9px 14px;cursor:pointer;justify-self:start}
+.ok{font-size:12.5px;color:#1E6B3A}
+
+/* floor plan */
+.plan svg{width:100%;height:auto;display:block}
+.key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;font-size:.9rem}
+.key div{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start}
+.key .k{width:22px;height:22px;border-radius:50%;background:var(--navy);color:var(--bg);font-weight:700;font-size:.75rem;display:grid;place-items:center;margin-top:1px}
+.key b{display:block}
+.key span{color:var(--gray);font-size:.84rem}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:620px}
+th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+th{font-family:var(--head);color:var(--navy);font-weight:700;background:var(--panel)}
+td:first-child{font-weight:700;white-space:nowrap}
+
+/* flow diagram */
+.dg-scroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:760px;height:auto;color:var(--ink)}
+.dg-fig{margin:0;display:grid;gap:.6rem}
+.dg-box{fill:var(--bg);stroke:var(--rule);stroke-width:1.5}
+.dg-key{fill:var(--panel);stroke:var(--navy);stroke-width:2}
+.dg-t{fill:var(--navy);font-family:var(--head);font-weight:700;font-size:14px}
+.dg-s{fill:var(--gray);font-family:var(--body);font-size:12px}
+.dg-c{fill:var(--ink);font-family:var(--body);font-size:12.5px}
+.dg-l{fill:var(--gray);font-family:var(--body);font-size:11.5px}
+.dg-h{fill:var(--gray);font-family:var(--body);font-size:10.5px;font-weight:700;letter-spacing:.08em}
+.dg-line{stroke:var(--ink);stroke-width:1.6;fill:none}
+.dg-back{stroke:var(--slate);stroke-dasharray:6 4}
+.dg-acc{stroke:var(--royal);stroke-width:2.4}
+.dg-acc-t{fill:var(--royal);font-weight:700}
+.dg-mk{fill:var(--ink)} .dg-mk-back{fill:var(--slate)} .dg-mk-acc{fill:var(--royal)}
+
+/* section buttons */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--rule)}
+.jump-in{max-width:1080px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.jump-in::-webkit-scrollbar{display:none}
+.jb{flex:none;font-size:.85rem;font-weight:700;text-decoration:none;color:var(--navy);border:1px solid var(--rule);border-radius:999px;padding:6px 14px;background:var(--bg);white-space:nowrap}
+.jb:hover{border-color:var(--navy)}
+.jb[aria-current="true"]{background:var(--navy);color:var(--bg);border-color:var(--navy)}
+.jb:focus-visible,.card-btn:focus-visible,.pn a:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
+section{scroll-margin-top:72px}
+.sum{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:36px;align-items:start}
+.sum-text{display:grid;gap:.85rem;max-width:68ch;min-width:0}
+.sum-text h3{margin-top:.4rem}
+.sum-list{margin:0;padding-left:1.1rem;display:grid;gap:.45rem}
+.cards{display:grid;gap:10px;min-width:0;position:sticky;top:84px}
+.cards-h{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gray)}
+.card-btn{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:13px 16px;border:1px solid var(--rule);border-radius:8px;text-decoration:none;color:var(--ink);background:var(--bg)}
+.card-btn:hover{border-color:var(--navy);background:var(--panel)}
+.card-btn b{font-family:var(--head);color:var(--navy);font-size:1rem}
+.card-btn span{color:var(--gray);font-size:.86rem;grid-column:1}
+.card-btn i{grid-row:1 / 3;grid-column:2;align-self:center;font-style:normal;color:var(--navy);font-size:1.1rem}
+.pn{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:6px}
+.pn a{font-size:.88rem;font-weight:700;text-decoration:none;color:var(--navy);border:1px solid var(--rule);border-radius:6px;padding:8px 14px;background:var(--bg)}
+.pn a:hover{border-color:var(--navy);background:var(--panel)}
+.pn .next{margin-left:auto}
+
+@media (max-width:860px){
+  .sum{grid-template-columns:minmax(0,1fr)} .cards{position:static}
+  .tsp{grid-template-columns:minmax(0,1fr)}
+  .mock,.cardrow{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .b-cols,form.report .two,.key{grid-template-columns:minmax(0,1fr)}
+  .tierbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  h1{font-size:1.6rem}
+  .bulletin{padding:18px 16px}
+}
+@media (prefers-reduced-motion:no-preference){.fz{transition:opacity .35s ease}}
+</style>
+<style>
+.jb[aria-current="page"]{background:var(--navy);color:var(--bg);border-color:var(--navy)}
+.page-sec{margin-top:8px}
+.crumb{font-size:.85rem;margin-bottom:10px}
+.crumb a{color:var(--gray);text-decoration:none;font-weight:700}
+.crumb a:hover{color:var(--navy)}
+.foot{margin-top:40px}
+</style>
+</head>
+<body>
+<nav class="jump" aria-label="Toolkit pages"><div class="jump-in">
+  <a class="jb" href="index.html">Summary</a>
+  <a class="jb" href="flow.html">Flow</a>
+  <a class="jb" href="tools.html" aria-current="page">Tools and places</a>
+  <a class="jb" href="brief.html">Public brief</a>
+  <a class="jb" href="map.html">Map</a>
+  <a class="jb" href="website.html">Website</a>
+  <a class="jb" href="library-corner.html">Library corner</a>
+</div></nav>
+<div class="wrap">
+  <p class="crumb"><a href="index.html">Delta Flood Ready Toolkit</a></p>
+  <section id="tsp" class="page-sec">
+    <h1>Tools, spaces, and places</h1>
+    <div class="prose"><p>The work happens in three kinds of settings. <b>Tools</b> are the data and software that produce and handle information. <b>Spaces</b> are the shared channels (digital and social) where messages travel. <b>Places</b> are the physical locations where people meet the program in person.</p></div>
+    <div class="tsp">
+      <div>
+        <h3>Tools <span class="kicker">data and software</span></h3>
+        <ul>
+          <li><b>Forecast sources</b><span>GEOGLOWS ensembles, the National Water Model, CBRFC river and seasonal forecasts, NWS watches and warnings, NRCS snowpack, USGS gauges</span></li>
+          <li><b>The community layer</b><span>ArcGIS Survey123 for observer reports and the pulse survey; ArcGIS Hub for the website; ArcGIS Dashboards at three levels</span></li>
+          <li><b>The AI agent</b><span>Drafts the brief and deeper look in English and Spanish, summarizes reports, and flags gaps for the custodian to approve</span></li>
+          <li><b>Message tools</b><span>Text-list service, QR codes and short links for each channel, a print template for the brief</span></li>
+          <li><b>Backup gear</b><span>NOAA Weather Radios, ham radio (ARES), staff gauges painted on bridge piers</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Spaces <span class="kicker">shared channels</span></h3>
+        <ul>
+          <li><b>Program website</b><span>The public brief, the deeper look, maps, and the report form (Layer 1 and Layer 2)</span></li>
+          <li><b>Text list</b><span>English and Spanish lists, sent at outlook, watch, and warning</span></li>
+          <li><b>Relational channels</b><span>Ward emails and ministering contacts, congregation group chats, town Facebook groups, phone trees</span></li>
+          <li><b>Broadcast</b><span>The local paper, regional radio, school text alerts</span></li>
+          <li><b>Observer network</b><span>A shared Survey123 group and a monthly digest for trained Layer 2 members</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Places <span class="kicker">physical locations</span></h3>
+        <ul>
+          <li><b>Library disaster corner</b><span>Standing education, the current brief, sign-ups, and plan nights (the anchor place)</span></li>
+          <li><b>Extension office</b><span>Training sessions, workshops, and the custodian's desk for the community layer</span></li>
+          <li><b>Ward buildings and churches</b><span>Announcements, sandbag crew sign-ups, and possible refuges</span></li>
+          <li><b>Fire station</b><span>Equipment staging, drills, and a brief posted on the door</span></li>
+          <li><b>Everyday stops</b><span>Feed store, grocery, gas stations, and the post office, each with its own QR code on a posted brief</span></li>
+          <li><b>Custodial sites</b><span>Schools, care centers, and farms with worker housing, each with its own trigger checklist</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="pn"><a class="prev" href="flow.html">← Flow</a><a class="next" href="brief.html">Public brief →</a></div>
+  <p class="note foot">These are illustrative mockups. Every flow, date, percentage, and map zone is invented for the design and is not a real forecast. Program names and web addresses are placeholders.</p>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  // ---------- map (shared by the brief and the website) ----------
+  // Road layout follows published sources: US-6/50 runs through town as Main Street and splits on the east side
+  // (US-6 northeast, US-50 southeast); Gunnison Bend Reservoir sits west of town on the lower Sevier.
+  // DMAD's position, the canal, the crossing, the building positions, and the zones are approximate.
+  const RIVER = "M 600 112 C 570 118 548 124 528 132 C 480 152 420 176 360 192 C 300 208 240 222 196 236 C 150 250 110 268 92 300 C 74 334 50 372 30 420";
+  const ZONES = [
+    {w:22, label:"1,800 cfs"},
+    {w:44, label:"2,400 cfs"},
+    {w:72, label:"3,000 cfs"}
+  ];
+  function mapSVG(id, level, compact){
+    const fs = compact ? 13 : 12;
+    let zones = "";
+    for (let i = ZONES.length - 1; i >= 0; i--){
+      const on = i <= level;
+      zones += `<path class="fz" d="${RIVER}" fill="none" stroke="#0047BA" stroke-opacity="${on ? (0.16 + (level - i) * 0.07) : 0}" stroke-width="${ZONES[i].w * 2}" stroke-linecap="round"/>`;
+    }
+    const crossingClosed = level >= 1;
+    return `<svg viewBox="0 0 600 400" role="img" aria-labelledby="${id}-t"><title id="${id}-t">Schematic flood map of Delta, Utah, at ${ZONES[level].label}</title>
+      <rect width="600" height="400" fill="#EEF0EC"/>
+      ${zones}
+      <path d="${RIVER}" fill="none" stroke="#2F6DB5" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="560" cy="126" rx="40" ry="18" fill="#2F6DB5" transform="rotate(-14 560 126)"/>
+      <ellipse cx="160" cy="248" rx="38" ry="16" fill="#2F6DB5" transform="rotate(-18 160 248)"/>
+      <path d="M 536 142 C 520 220 500 300 440 342 L 300 352" fill="none" stroke="#5B8FC9" stroke-width="2.5" stroke-dasharray="7 5"/>
+      <g fill="#D9DCDF" stroke="#C3C8CC">
+        <rect x="300" y="246" width="40" height="30"/><rect x="346" y="246" width="40" height="30"/><rect x="392" y="246" width="40" height="30"/>
+        <rect x="300" y="294" width="40" height="30"/><rect x="346" y="294" width="40" height="30"/><rect x="392" y="294" width="40" height="30"/>
+        <rect x="346" y="330" width="40" height="24"/>
+      </g>
+      <path d="M 0 285 L 450 285" stroke="#7C878E" stroke-width="5"/>
+      <path d="M 450 285 L 600 212" stroke="#7C878E" stroke-width="4"/>
+      <path d="M 450 285 L 600 372" stroke="#7C878E" stroke-width="4"/>
+      ${crossingClosed ? '<g><circle cx="96" cy="285" r="11" fill="#B42318"/><path d="M90 285 L102 285" stroke="#fff" stroke-width="3"/></g>' : ''}
+      <g font-family="Arial" font-size="${fs}" fill="#1F1F1F">
+        <text x="590" y="96" text-anchor="end" font-weight="700" fill="#1D4E89">DMAD Res. (approx.)</text>
+        <text x="160" y="222" text-anchor="middle" font-weight="700" fill="#1D4E89">Gunnison Bend</text>
+        <text x="300" y="176" font-style="italic" fill="#1D4E89" transform="rotate(-14 300 176)">Sevier River</text>
+        <text x="366" y="374" font-weight="700" font-size="${fs+2}" text-anchor="middle">Delta</text>
+        <text x="200" y="302" font-size="${fs-1}" fill="#4A4A4A" text-anchor="middle">Main St (US-6 / US-50)</text>
+        <text x="596" y="200" font-size="${fs-1}" fill="#4A4A4A" text-anchor="end">US-6 to Salt Lake City</text>
+        <text x="596" y="392" font-size="${fs-1}" fill="#4A4A4A" text-anchor="end">US-50 to Salina</text>
+        <text x="14" y="276" font-size="${fs-1}" fill="#4A4A4A">to Ely, NV</text>
+        <text x="300" y="368" font-size="${fs-1}" fill="#1D4E89">canal</text>
+      </g>
+      <g font-family="Arial" font-size="${fs-1}" font-weight="700">
+        <g><rect x="353" y="301" width="12" height="12" fill="#002E5D"/><text x="369" y="311" fill="#002E5D">Library</text></g>
+        <g><rect x="399" y="255" width="12" height="12" fill="#B42318"/><text x="415" y="265" fill="#B42318" font-size="${fs-2}">Fire</text></g>
+      </g>
+      <g font-family="Arial" font-size="${fs-2}" fill="#1F1F1F">
+        <rect x="10" y="10" width="${compact ? 206 : 192}" height="${compact ? 84 : 80}" fill="#FFFFFF" fill-opacity=".92" stroke="#D5D7D9"/>
+        <rect x="18" y="20" width="18" height="10" fill="#0047BA" fill-opacity=".38"/><text x="42" y="29">Likely to flood</text>
+        <rect x="18" y="38" width="18" height="10" fill="#0047BA" fill-opacity=".18"/><text x="42" y="47">Could flood</text>
+        <circle cx="27" cy="62" r="6" fill="#B42318"/><text x="42" y="66">Road may close</text>
+        <text x="18" y="85" fill="#4A4A4A" font-style="italic">Schematic; positions approximate</text>
+      </g>
+    </svg>`;
+  }
+  if ($("bulletinMap")) $("bulletinMap").innerHTML = mapSVG("bm", 1, true);
+  if ($("bigMap")) $("bigMap").innerHTML = mapSVG("big", 1, false);
+
+  const flow = document.getElementById("flow");
+  const siteMap = document.getElementById("siteMap");
+  const flownote = document.getElementById("flownote");
+  const NOTES = [
+    "<b>1,800 cfs:</b> the river fills its banks. Low pasture right along the river and below Gunnison Bend gets wet. No roads close.",
+    "<b>2,400 cfs (this week's forecast range):</b> fields near Gunnison Bend and along the river flood. The US-6 / US-50 crossing west of Gunnison Bend may close.",
+    "<b>3,000 cfs (above the example past high mark):</b> water reaches the low blocks north of Main Street. Side streets north of Main may close. Move people and equipment out of the shaded areas."
+  ];
+  function drawFlow(){ const v = +flow.value; siteMap.innerHTML = mapSVG("sm", v, false); flownote.innerHTML = NOTES[v]; }
+  if (flow) { flow.addEventListener("input", drawFlow); drawFlow(); }
+
+  // ---------- tier buttons ----------
+  const TIERS = {
+    standing:"<b>Standing.</b> No flood expected. The corner, plan nights, and Layer 2 training keep the network ready. Observers send a monthly check-in.",
+    outlook:"<b>Outlook (January to March).</b> Snowpack is well above normal. Monthly briefs show the season building. GEOGLOWS ensembles and CBRFC water-supply forecasts lead here.",
+    watch:"<b>Watch (now).</b> The NWS has a flood watch out and reservoirs are near full. Weekly briefs, warmed-up phone trees, staged crews, and a request for observer reports twice a week.",
+    warning:"<b>Warning.</b> The NWS warning is repeated word for word with the local map. Phone trees run, responders close roads, and the library opens as an information point if it is safe."
+  };
+  const tdesc = document.getElementById("tierdesc");
+  document.querySelectorAll(".tierbar button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".tierbar button").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+    tdesc.innerHTML = TIERS[b.dataset.t];
+  }));
+  if (tdesc) tdesc.innerHTML = TIERS.watch;
+
+  // ---------- hydrograph ----------
+  const days = ["May 1","2","3","4","5","May 6","7","8","9","10","11","12","13","14","15","May 16"];
+  const obs = [1420,1510,1600,1690,1780,1880];
+  const mid = [null,null,null,null,null,1880,1980,2090,2190,2280,2340,2360,2320,2240,2130,2010];
+  const W = 560, H = 270, L = 48, R = 12, T = 14, B = 34;
+  const x = i => L + i * (W - L - R) / (days.length - 1);
+  const y = v => T + (H - T - B) * (1 - v / 3200);
+  let lo = [], hi = [];
+  for (let i = 5; i < days.length; i++){ const s = (i - 5) * 52; lo.push([i, mid[i] - s]); hi.push([i, mid[i] + s * 1.3]); }
+  const band = "M" + hi.map(([i,v]) => `${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" L ") + " L " + lo.slice().reverse().map(([i,v]) => `${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" L ") + " Z";
+  const oLine = obs.map((v,i) => `${i ? "L" : "M"}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" ");
+  const mLine = mid.map((v,i) => v == null ? "" : `${i === 5 ? "M" : "L"}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" ");
+  let grid = "";
+  for (let v = 0; v <= 3200; v += 800){ grid += `<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#E6E8EA"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end">${v.toLocaleString()}</text>`; }
+  let xl = "";
+  [0,5,10,15].forEach(i => { xl += `<text x="${x(i)}" y="${H-12}" text-anchor="middle">${i===5?"Today, May 6":days[i].length<3?"May "+days[i]:days[i]}</text>`; });
+  if ($("hydro")) $("hydro").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Forecast hydrograph: observed flow rising from 1,420 to 1,880 cfs, forecast middle peaking near 2,360 cfs on May 12, above the 2,200 cfs flood flow"><g font-family="Arial" font-size="11" fill="#4A4A4A">${grid}${xl}</g>
+    <path d="${band}" fill="rgba(0,71,186,.16)"/>
+    <line x1="${L}" x2="${W-R}" y1="${y(2200)}" y2="${y(2200)}" stroke="#9A5B00" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="${L+4}" y="${y(2200)+14}" font-family="Arial" font-size="11" fill="#9A5B00" font-weight="700">Flood flow 2,200</text>
+    <line x1="${L}" x2="${W-R}" y1="${y(2700)}" y2="${y(2700)}" stroke="#7C878E" stroke-width="1" stroke-dasharray="2 3"/>
+    <text x="${L+4}" y="${y(2700)-5}" font-family="Arial" font-size="11" fill="#4A4A4A">Past high mark 2,700 (example)</text>
+    <line x1="${x(5)}" x2="${x(5)}" y1="${T}" y2="${H-B}" stroke="#BFC5CA"/>
+    <path d="${oLine}" fill="none" stroke="#1F1F1F" stroke-width="2.5"/>
+    <path d="${mLine}" fill="none" stroke="#0047BA" stroke-width="2.5"/>
+    <circle cx="${x(5)}" cy="${y(1880)}" r="4" fill="#1F1F1F"/>
+    <circle cx="${x(11)}" cy="${y(2360)}" r="4" fill="#0047BA"/>
+    <text x="${x(11)}" y="${y(2360)-10}" text-anchor="middle" font-family="Arial" font-size="11" fill="#0047BA" font-weight="700">Peak about 2,360 on May 12</text>
+  </svg>`;
+
+  // ---------- feeding bars ----------
+  const BARS = [["Snowpack left to melt","145% of normal",100],["Sevier Bridge Reservoir","97% full",97],["DMAD Reservoir","92% full",92],["Gunnison Bend Reservoir","88% full",88]];
+  if ($("bars")) $("bars").innerHTML = BARS.map(([n,t,p]) => `<div class="bar"><div class="row"><span>${n}</span><b>${t}</b></div><div class="track"><div class="fill" style="width:${p}%"></div></div></div>`).join("");
+
+  // ---------- report form ----------
+  if ($("reportForm")) $("reportForm").addEventListener("submit", e => { e.preventDefault(); document.getElementById("rok").hidden = false; });
+
+
+  // ---------- QR placeholder (decorative, not a real code) ----------
+  let s = 7, cells = "";
+  const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const finder = (cx,cy) => `<rect x="${cx}" y="${cy}" width="7" height="7" fill="#1F1F1F"/><rect x="${cx+1}" y="${cy+1}" width="5" height="5" fill="#fff"/><rect x="${cx+2}" y="${cy+2}" width="3" height="3" fill="#1F1F1F"/>`;
+  for (let r = 0; r < 25; r++) for (let c = 0; c < 25; c++){
+    const inF = (r<8&&c<8)||(r<8&&c>16)||(r>16&&c<8);
+    if (!inF && rnd() > 0.52) cells += `<rect x="${c}" y="${r}" width="1" height="1"/>`;
+  }
+  if ($("qr")) $("qr").innerHTML = `<rect width="25" height="25" fill="#fff"/><g fill="#1F1F1F">${cells}</g>${finder(0,0)}${finder(18,0)}${finder(0,18)}`;
+})();
+</script>
+</body>
+</html>
