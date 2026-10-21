@@ -415,7 +415,7 @@ td:first-child{font-weight:700;white-space:nowrap}
     <h2>The map</h2>
     <div class="prose">
       <p>The brief's map is deliberately simple: the river, the reservoirs, the canals, the town, the roads that matter, and three shaded zones. It names <b>places people know</b> (Main Street, Gunnison Bend, the river road crossing) and shows where the library, fire station, and higher ground are. The website version below lets readers move between flow levels.</p>
-      <p class="caption">The map is a schematic drawn for this mockup. It is not to scale, and the zones are not real inundation estimates. A working version would draw on NWM or GEOGLOWS-based flood inundation mapping, checked against what happened locally in 1983 and 2023.</p>
+      <p class="caption">The map is a schematic drawn for this mockup. It is not to scale, and the zones are not real inundation estimates. A working version would draw on NWM or GEOGLOWS-based flood inundation mapping, checked against local records of past floods (such as the documented 1983 flood).</p>
     </div>
     <div class="paper" style="padding:12px;max-width:760px" id="bigMap"></div>
   </section>
@@ -450,7 +450,7 @@ td:first-child{font-weight:700;white-space:nowrap}
               <span><i style="background:#0047BA"></i>Forecast, middle</span>
               <span><i style="background:rgba(0,71,186,.18)"></i>Range of likely outcomes</span>
               <span><i style="background:#9A5B00"></i>Flood flow</span>
-              <span><i style="background:#7C878E"></i>2023 peak</span>
+              <span><i style="background:#7C878E"></i>Past high mark (example)</span>
             </div>
           </div>
           <div class="panel">
@@ -588,7 +588,7 @@ td:first-child{font-weight:700;white-space:nowrap}
       <table>
         <thead><tr><th>Tier</th><th>Wall and table</th><th>Staff and programs</th><th>Hours and use</th></tr></thead>
         <tbody>
-          <tr><td>Standing</td><td>Last season's story, the 1983 and 2023 maps, the alert-system diagram</td><td>Monthly plan nights; Layer 2 training with Extension</td><td>Normal hours</td></tr>
+          <tr><td>Standing</td><td>Last season's story, 1983 flood photos and a map of past high water, the alert-system diagram</td><td>Monthly plan nights; Layer 2 training with Extension</td><td>Normal hours</td></tr>
           <tr><td>Outlook</td><td>Monthly Sevier outlook brief; snowpack chart starts updating</td><td>Brief explained at story time and plan night; sign-up push</td><td>Normal hours</td></tr>
           <tr><td>Watch</td><td>Weekly brief; map table shows the shaded zones; tier light amber</td><td>Staff field questions with the agent's Q&amp;A sheet; sandbag crew sign-ups</td><td>Possible extended evening hours</td></tr>
           <tr><td>Warning</td><td>Official warning posted word for word with the local map</td><td>Staff relay the warning on library channels; phone and charging station</td><td>Refuge and information point if the building is safe</td></tr>
@@ -676,7 +676,7 @@ td:first-child{font-weight:700;white-space:nowrap}
   const NOTES = [
     "<b>1,800 cfs:</b> the river fills its banks. Low pasture right along the river and below Gunnison Bend gets wet. No roads close.",
     "<b>2,400 cfs (this week's forecast range):</b> fields near Gunnison Bend and along the river flood. The river road crossing north of town may close.",
-    "<b>3,000 cfs (above the 2023 peak):</b> water reaches the low blocks north of Main Street. Main Street east of the library may close. Move to higher ground south of US-6."
+    "<b>3,000 cfs (above the example past high mark):</b> water reaches the low blocks north of Main Street. Main Street east of the library may close. Move to higher ground south of US-6."
   ];
   function drawFlow(){ const v = +flow.value; siteMap.innerHTML = mapSVG("sm", v, false); flownote.innerHTML = NOTES[v]; }
   flow.addEventListener("input", drawFlow); drawFlow();
@@ -716,7 +716,7 @@ td:first-child{font-weight:700;white-space:nowrap}
     <line x1="${L}" x2="${W-R}" y1="${y(2200)}" y2="${y(2200)}" stroke="#9A5B00" stroke-width="1.5" stroke-dasharray="6 4"/>
     <text x="${L+4}" y="${y(2200)+14}" font-family="Arial" font-size="11" fill="#9A5B00" font-weight="700">Flood flow 2,200</text>
     <line x1="${L}" x2="${W-R}" y1="${y(2700)}" y2="${y(2700)}" stroke="#7C878E" stroke-width="1" stroke-dasharray="2 3"/>
-    <text x="${L+4}" y="${y(2700)-5}" font-family="Arial" font-size="11" fill="#4A4A4A">2023 peak 2,700</text>
+    <text x="${L+4}" y="${y(2700)-5}" font-family="Arial" font-size="11" fill="#4A4A4A">Past high mark 2,700 (example)</text>
     <line x1="${x(5)}" x2="${x(5)}" y1="${T}" y2="${H-B}" stroke="#BFC5CA"/>
     <path d="${oLine}" fill="none" stroke="#1F1F1F" stroke-width="2.5"/>
     <path d="${mLine}" fill="none" stroke="#0047BA" stroke-width="2.5"/>
