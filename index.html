@@ -154,7 +154,34 @@ td:first-child{font-weight:700;white-space:nowrap}
 .dg-acc-t{fill:var(--royal);font-weight:700}
 .dg-mk{fill:var(--ink)} .dg-mk-back{fill:var(--slate)} .dg-mk-acc{fill:var(--royal)}
 
+/* section buttons */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--rule)}
+.jump-in{max-width:1080px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.jump-in::-webkit-scrollbar{display:none}
+.jb{flex:none;font-size:.85rem;font-weight:700;text-decoration:none;color:var(--navy);border:1px solid var(--rule);border-radius:999px;padding:6px 14px;background:var(--bg);white-space:nowrap}
+.jb:hover{border-color:var(--navy)}
+.jb[aria-current="true"]{background:var(--navy);color:var(--bg);border-color:var(--navy)}
+.jb:focus-visible,.card-btn:focus-visible,.pn a:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
+section{scroll-margin-top:72px}
+.sum{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:36px;align-items:start}
+.sum-text{display:grid;gap:.85rem;max-width:68ch;min-width:0}
+.sum-text h3{margin-top:.4rem}
+.sum-list{margin:0;padding-left:1.1rem;display:grid;gap:.45rem}
+.cards{display:grid;gap:10px;min-width:0;position:sticky;top:84px}
+.cards-h{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gray)}
+.card-btn{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:13px 16px;border:1px solid var(--rule);border-radius:8px;text-decoration:none;color:var(--ink);background:var(--bg)}
+.card-btn:hover{border-color:var(--navy);background:var(--panel)}
+.card-btn b{font-family:var(--head);color:var(--navy);font-size:1rem}
+.card-btn span{color:var(--gray);font-size:.86rem;grid-column:1}
+.card-btn i{grid-row:1 / 3;grid-column:2;align-self:center;font-style:normal;color:var(--navy);font-size:1.1rem}
+.pn{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:6px}
+.pn a{font-size:.88rem;font-weight:700;text-decoration:none;color:var(--navy);border:1px solid var(--rule);border-radius:6px;padding:8px 14px;background:var(--bg)}
+.pn a:hover{border-color:var(--navy);background:var(--panel)}
+.pn .next{margin-left:auto}
+
 @media (max-width:860px){
+  .sum{grid-template-columns:minmax(0,1fr)} .cards{position:static}
   .tsp{grid-template-columns:minmax(0,1fr)}
   .mock,.cardrow{grid-template-columns:minmax(0,1fr)}
 }
@@ -170,12 +197,55 @@ td:first-child{font-weight:700;white-space:nowrap}
 <body>
 
 
+<nav class="jump" aria-label="Page sections"><div class="jump-in">
+  <a class="jb" href="#summary">Summary</a>
+  <a class="jb" href="#connect">Flow</a>
+  <a class="jb" href="#tsp">Tools and places</a>
+  <a class="jb" href="#brief">Public brief</a>
+  <a class="jb" href="#map">Map</a>
+  <a class="jb" href="#website">Website</a>
+  <a class="jb" href="#corner">Library corner</a>
+</div></nav>
 <div class="wrap">
   <header>
     <h1>Delta Flood Ready Toolkit</h1>
     <p class="lede">What the rural flood early-warning pilot looks like on the ground in Delta, Utah: the tools, spaces, and places where the work happens, and mockups of the public brief, the map, the program website, and the library's disaster corner. The example is a Sevier River snowmelt year at the <b>watch</b> tier.</p>
     <p class="note" style="margin-top:14px">These are illustrative mockups. Every flow, date, percentage, and map zone is invented for the design and is not a real forecast. Program names and web addresses are placeholders.</p>
   </header>
+
+  <section id="summary">
+    <h2>Pilot summary</h2>
+    <div class="sum">
+      <div class="sum-text">
+        <p>In much of rural America, the whole institutional stack is a library, a church, and a volunteer fire department. Flood forecasts now cover millions of river reaches, but the <b>last mile to families in these towns is still unbuilt</b>. Warnings can be issued and still fail to become action.</p>
+        <p>This pilot builds that last mile on <b>institutions people already trust</b>, and it treats <b>preparation and alerting as one system</b>. Towns build and rehearse the warning chain for months, so when an official warning comes, people already know what it means and what to do. The anchor is the local library, with USU Extension where there is no library.</p>
+        <h3>How it works</h3>
+        <ul class="sum-list">
+          <li><b>Forecast-tiered readiness.</b> Actions scale with lead time: standing, outlook, watch, and warning.</li>
+          <li><b>Echo, never originate.</b> The National Weather Service stays the official voice; local institutions repeat it and add local meaning.</li>
+          <li><b>A layered message.</b> A one-page bilingual brief for everyone, and a deeper look for trained community members.</li>
+          <li><b>Two-way and pullable.</b> Trained observers report conditions into a community-held layer that agencies can pull from.</li>
+          <li><b>An AI agent that drafts.</b> People approve everything that goes out.</li>
+          <li><b>Confirmed redundancy.</b> Two or more paths per household, with receipts tracked so responders go first where no one has confirmed.</li>
+        </ul>
+        <h3>Where and how we test it</h3>
+        <p>A Utah cohort of <b>Delta</b> (slow snowmelt flooding on the Sevier River), <b>Springdale</b> (flash floods and a visitor population), and <b>Hildale</b> (flash floods and low trust in outside institutions). Success is measured in near real time by <b>reach, understanding, action, and network health</b>.</p>
+        <h3>Partners</h3>
+        <p>Millard County emergency management and NWS Salt Lake City first, then USU Extension and the Utah State Library, then local libraries, congregations, fire departments, irrigation companies, schools, and care centers.</p>
+        <p class="note">This is an instant pilot from a working session. Partner commitments, local facts, and cohort choices are assumptions still to be verified.</p>
+      </div>
+      <div class="cards" aria-label="Components">
+        <div class="cards-h">Explore the components</div>
+        <a class="card-btn" href="#connect"><b>How the pieces connect</b><span>Flow diagram from forecasts to households and back</span><i aria-hidden="true">→</i></a>
+        <a class="card-btn" href="#tsp"><b>Tools, spaces, and places</b><span>Where the work happens</span><i aria-hidden="true">→</i></a>
+        <a class="card-btn" href="#brief"><b>The public brief</b><span>The one-page bilingual bulletin and text alert</span><i aria-hidden="true">→</i></a>
+        <a class="card-btn" href="#map"><b>The map</b><span>Schematic of Delta and the Sevier River</span><i aria-hidden="true">→</i></a>
+        <a class="card-btn" href="#website"><b>The program website</b><span>The interactive deeper look and report form</span><i aria-hidden="true">→</i></a>
+        <a class="card-btn" href="#corner"><b>The library disaster corner</b><span>Floor plan and how it changes by tier</span><i aria-hidden="true">→</i></a>
+      </div>
+    </div>
+  </section>
+
 
   <section id="connect">
     <h2>How the pieces connect</h2>
@@ -268,7 +338,6 @@ td:first-child{font-weight:700;white-space:nowrap}
 
         <line class="dg-line" x1="460" y1="214" x2="508" y2="140" marker-end="url(#dgA)"/>
         <line class="dg-line" x1="460" y1="230" x2="508" y2="230" marker-end="url(#dgA)"/>
-        <text class="dg-l" x="484" y="248" text-anchor="middle">approved</text>
 
         <!-- product to channels bracket -->
         <line class="dg-line" x1="660" y1="130" x2="700" y2="130"/>
@@ -731,6 +800,25 @@ td:first-child{font-weight:700;white-space:nowrap}
 
   // ---------- report form ----------
   document.getElementById("reportForm").addEventListener("submit", e => { e.preventDefault(); document.getElementById("rok").hidden = false; });
+
+
+  // ---------- section buttons: previous/next and current-section highlight ----------
+  const ORDER = [["summary","Summary"],["connect","How the pieces connect"],["tsp","Tools, spaces, and places"],["brief","The public brief"],["map","The map"],["website","The program website"],["corner","The library disaster corner"]];
+  ORDER.forEach(([id], i) => {
+    const sec = document.getElementById(id); if (!sec) return;
+    const bar = document.createElement("div"); bar.className = "pn";
+    if (i > 0) bar.innerHTML += `<a class="prev" href="#${ORDER[i-1][0]}">← ${ORDER[i-1][1]}</a>`;
+    if (i < ORDER.length - 1) bar.innerHTML += `<a class="next" href="#${ORDER[i+1][0]}">${ORDER[i+1][1]} →</a>`;
+    if (id !== "summary") bar.innerHTML += i === ORDER.length - 1 ? `<a class="next" href="#summary">Back to summary ↑</a>` : "";
+    sec.appendChild(bar);
+  });
+  const navLinks = [...document.querySelectorAll(".jb")];
+  const mark = id => navLinks.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + id ? "true" : "false"));
+  mark("summary");
+  if ("IntersectionObserver" in window){
+    const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) mark(e.target.id); }); }, {rootMargin:"-30% 0px -60% 0px"});
+    ORDER.forEach(([id]) => { const el = document.getElementById(id); if (el) io.observe(el); });
+  }
 
   // ---------- QR placeholder (decorative, not a real code) ----------
   let s = 7, cells = "";
