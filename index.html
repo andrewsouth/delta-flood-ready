@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Tools, spaces, and places for a rural flood early-warning pilot in Delta, Utah, with illustrative mockups of the public brief, map, program website, and library disaster corner.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Delta Flood Ready Toolkit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one readable column of explanation, with each mockup set on its own "paper" surface that keeps its printed look in either theme */
+:root{
+  --bg:#FFFFFF; --ink:#1F1F1F; --navy:#002E5D; --gray:#4A4A4A; --rule:#D5D7D9; --royal:#0047BA; --slate:#7C878E; --panel:#F4F6F8;
+  --paper:#FFFFFF; --paper-ink:#1F1F1F; --paper-navy:#002E5D; --paper-gray:#4A4A4A; --paper-rule:#D5D7D9; --paper-soft:#F4F6F8;
+  --water:#2F6DB5; --flood:#0047BA; --land:#EEF0EC; --town:#D9DCDF; --road:#9AA3AA; --canal:#5B8FC9;
+  --t-standing:#5F6B73; --t-outlook:#0047BA; --t-watch:#9A5B00; --t-warning:#B42318;
+  --head:Georgia,"Times New Roman",serif; --body:Arial,Helvetica,sans-serif;
+  --shadow:0 1px 2px rgba(0,0,0,.08),0 6px 24px rgba(0,30,60,.08);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1620; --ink:#E6E9EC; --navy:#9CC0EA; --gray:#AAB3BB; --rule:#2C3A48; --royal:#8DB4F0; --slate:#8F9AA3; --panel:#152130;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 24px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1620; --ink:#E6E9EC; --navy:#9CC0EA; --gray:#AAB3BB; --rule:#2C3A48; --royal:#8DB4F0; --slate:#8F9AA3; --panel:#152130;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 24px rgba(0,0,0,.35); color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--head);color:var(--navy);text-wrap:balance;line-height:1.25;margin:0}
+h1{font-size:2rem}
+h2{font-size:1.45rem;margin-bottom:.4rem}
+h3{font-size:1.1rem}
+p{margin:0}
+.lede{color:var(--gray);font-size:1.05rem;max-width:68ch;margin-top:.6rem}
+.prose{max-width:68ch;display:grid;gap:.8rem}
+section{display:grid;gap:1.1rem;margin-top:56px}
+.caption{color:var(--gray);font-size:.85rem}
+.note{font-size:.85rem;color:var(--gray);border-left:3px solid var(--rule);padding-left:.75rem;max-width:68ch}
+a{color:var(--royal)}
+
+/* tools, spaces, places */
+.tsp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tsp > div{background:var(--panel);border-radius:8px;padding:18px 18px 20px;display:grid;gap:.7rem;align-content:start;min-width:0}
+.tsp h3{display:flex;align-items:baseline;gap:.5rem}
+.tsp .kicker{font-family:var(--body);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);font-weight:700}
+.tsp ul{list-style:none;padding:0;margin:0;display:grid;gap:.65rem}
+.tsp li{font-size:.92rem;line-height:1.45}
+.tsp li b{color:var(--ink)}
+.tsp li span{display:block;color:var(--gray);font-size:.84rem}
+
+/* mock frame */
+.mock{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start}
+.mock.single{grid-template-columns:minmax(0,1fr)}
+.mock .side{display:grid;gap:.8rem;min-width:0}
+.mock .side ul{margin:0;padding-left:1.1rem;display:grid;gap:.4rem;font-size:.93rem}
+.paper{background:var(--paper);color:var(--paper-ink);box-shadow:var(--shadow);border:1px solid var(--paper-rule);border-radius:4px;min-width:0}
+.paper h1,.paper h2,.paper h3,.paper h4{color:var(--paper-navy)}
+
+/* bulletin */
+.bulletin{padding:26px 26px 20px;display:grid;gap:14px;font-size:13px;line-height:1.45}
+.b-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.b-org{font-size:11px;color:var(--paper-gray);text-transform:uppercase;letter-spacing:.07em;font-weight:700}
+.tierchip{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;color:#fff;white-space:nowrap}
+.tierchip.watch{background:var(--t-watch)} .tierchip.outlook{background:var(--t-outlook)} .tierchip.warning{background:var(--t-warning)} .tierchip.standing{background:var(--t-standing)}
+.ladder{display:flex;gap:4px;margin-top:6px}
+.ladder span{font-size:9.5px;padding:2px 6px;border-radius:3px;background:var(--paper-soft);color:var(--paper-gray);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.ladder span.on{background:var(--t-watch);color:#fff}
+.b-head{font-family:var(--head);font-size:21px;font-weight:700;color:var(--paper-navy);line-height:1.2;text-wrap:balance}
+.b-map svg{width:100%;height:auto;display:block;border:1px solid var(--paper-rule);border-radius:3px}
+.b-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.b-cols h4{font-family:var(--head);font-size:13.5px;margin-bottom:4px}
+.b-cols ul{margin:0;padding-left:1rem;display:grid;gap:3px}
+.b-es{border-top:1px solid var(--paper-rule);padding-top:10px;display:grid;gap:6px}
+.b-es .b-heades{font-family:var(--head);font-weight:700;color:var(--paper-navy);font-size:15px}
+.b-foot{display:flex;gap:14px;align-items:center;border-top:1px solid var(--paper-rule);padding-top:10px;font-size:11px;color:var(--paper-gray)}
+.qr{width:62px;height:62px;flex:none}
+
+/* sms */
+.phone{max-width:330px;width:100%;padding:16px;border-radius:26px;background:var(--paper);border:1px solid var(--paper-rule);box-shadow:var(--shadow);display:grid;gap:10px;color:var(--paper-ink)}
+.phone .from{text-align:center;font-size:12px;color:var(--paper-gray)}
+.bubble{background:var(--paper-soft);border-radius:16px 16px 16px 4px;padding:10px 12px;font-size:13.5px;line-height:1.45}
+
+/* website mock */
+.site{overflow:hidden}
+.site-bar{display:flex;gap:6px;align-items:center;padding:9px 12px;background:var(--paper-soft);border-bottom:1px solid var(--paper-rule);font-size:12px;color:var(--paper-gray)}
+.site-bar i{width:9px;height:9px;border-radius:50%;background:var(--paper-rule);display:block}
+.site-bar .url{margin-left:8px;background:var(--paper);border:1px solid var(--paper-rule);border-radius:4px;padding:2px 10px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.site-nav{display:flex;flex-wrap:wrap;gap:4px 18px;padding:12px 20px;border-bottom:1px solid var(--paper-rule);font-size:13px;align-items:baseline}
+.site-nav .brand{font-family:var(--head);font-weight:700;color:var(--paper-navy);font-size:16px;margin-right:auto}
+.site-nav span.cur{color:var(--paper-navy);font-weight:700;border-bottom:2px solid var(--paper-navy)}
+.site-body{padding:20px;display:grid;gap:22px;font-size:14px}
+.tierbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.tierbar button{font:inherit;font-size:12.5px;font-weight:700;padding:9px 6px;border-radius:5px;border:1px solid var(--paper-rule);background:var(--paper);color:var(--paper-gray);cursor:pointer;text-align:center}
+.tierbar button[aria-pressed="true"]{color:#fff;border-color:transparent}
+.tierbar button[data-t="standing"][aria-pressed="true"]{background:var(--t-standing)}
+.tierbar button[data-t="outlook"][aria-pressed="true"]{background:var(--t-outlook)}
+.tierbar button[data-t="watch"][aria-pressed="true"]{background:var(--t-watch)}
+.tierbar button[data-t="warning"][aria-pressed="true"]{background:var(--t-warning)}
+.tierbar button:focus-visible,.site input:focus-visible,.site select:focus-visible,.site textarea:focus-visible,.btn:focus-visible{outline:2px solid var(--royal);outline-offset:2px}
+.tierdesc{background:var(--paper-soft);border-radius:6px;padding:12px 14px;font-size:13.5px}
+.tierdesc b{color:var(--paper-navy)}
+.cardrow{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px}
+.panel{border:1px solid var(--paper-rule);border-radius:6px;padding:14px;display:grid;gap:8px;min-width:0}
+.panel h4{font-family:var(--head);font-size:14.5px}
+.panel .sub{font-size:12px;color:var(--paper-gray)}
+.chart svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--paper-gray)}
+.legend i{display:inline-block;width:14px;height:8px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.bars{display:grid;gap:10px;font-size:12.5px}
+.bar{display:grid;gap:3px}
+.bar .row{display:flex;justify-content:space-between;gap:8px;font-variant-numeric:tabular-nums}
+.bar .track{height:9px;background:var(--paper-soft);border-radius:5px;overflow:hidden}
+.bar .fill{height:100%;background:var(--water);border-radius:5px}
+.confidence{font-size:13px;display:grid;gap:6px}
+.slider{display:grid;gap:6px}
+.slider input{width:100%;accent-color:#0047BA}
+.slider .ticks{display:flex;justify-content:space-between;font-size:11.5px;color:var(--paper-gray);font-variant-numeric:tabular-nums}
+.mapbox svg{width:100%;height:auto;display:block;border:1px solid var(--paper-rule);border-radius:4px}
+.mapnote{font-size:13px;background:var(--paper-soft);border-radius:6px;padding:10px 12px}
+form.report{display:grid;gap:10px;font-size:13px}
+form.report .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form.report label{display:grid;gap:4px;color:var(--paper-gray);font-size:12px}
+form.report select,form.report input,form.report textarea{font:inherit;font-size:13.5px;padding:7px 9px;border:1px solid var(--paper-rule);border-radius:4px;background:var(--paper);color:var(--paper-ink)}
+.btn{font:inherit;font-weight:700;font-size:13px;background:#002E5D;color:#fff;border:0;border-radius:5px;padding:9px 14px;cursor:pointer;justify-self:start}
+.ok{font-size:12.5px;color:#1E6B3A}
+
+/* floor plan */
+.plan svg{width:100%;height:auto;display:block}
+.key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;font-size:.9rem}
+.key div{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start}
+.key .k{width:22px;height:22px;border-radius:50%;background:var(--navy);color:var(--bg);font-weight:700;font-size:.75rem;display:grid;place-items:center;margin-top:1px}
+.key b{display:block}
+.key span{color:var(--gray);font-size:.84rem}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:620px}
+th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+th{font-family:var(--head);color:var(--navy);font-weight:700;background:var(--panel)}
+td:first-child{font-weight:700;white-space:nowrap}
+
+/* flow diagram */
+.dg-scroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:760px;height:auto;color:var(--ink)}
+.dg-fig{margin:0;display:grid;gap:.6rem}
+.dg-box{fill:var(--bg);stroke:var(--rule);stroke-width:1.5}
+.dg-key{fill:var(--panel);stroke:var(--navy);stroke-width:2}
+.dg-t{fill:var(--navy);font-family:var(--head);font-weight:700;font-size:14px}
+.dg-s{fill:var(--gray);font-family:var(--body);font-size:12px}
+.dg-c{fill:var(--ink);font-family:var(--body);font-size:12.5px}
+.dg-l{fill:var(--gray);font-family:var(--body);font-size:11.5px}
+.dg-h{fill:var(--gray);font-family:var(--body);font-size:10.5px;font-weight:700;letter-spacing:.08em}
+.dg-line{stroke:var(--ink);stroke-width:1.6;fill:none}
+.dg-back{stroke:var(--slate);stroke-dasharray:6 4}
+.dg-acc{stroke:var(--royal);stroke-width:2.4}
+.dg-acc-t{fill:var(--royal);font-weight:700}
+.dg-mk{fill:var(--ink)} .dg-mk-back{fill:var(--slate)} .dg-mk-acc{fill:var(--royal)}
+
+@media (max-width:860px){
+  .tsp{grid-template-columns:minmax(0,1fr)}
+  .mock,.cardrow{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .b-cols,form.report .two,.key{grid-template-columns:minmax(0,1fr)}
+  .tierbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  h1{font-size:1.6rem}
+  .bulletin{padding:18px 16px}
+}
+@media (prefers-reduced-motion:no-preference){.fz{transition:opacity .35s ease}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <h1>Delta Flood Ready Toolkit</h1>
+    <p class="lede">What the rural flood early-warning pilot looks like on the ground in Delta, Utah: the tools, spaces, and places where the work happens, and mockups of the public brief, the map, the program website, and the library's disaster corner. The example is a Sevier River snowmelt year at the <b>watch</b> tier.</p>
+    <p class="note" style="margin-top:14px">These are illustrative mockups. Every flow, date, percentage, and map zone is invented for the design and is not a real forecast. Program names and web addresses are placeholders.</p>
+  </header>
+
+  <section id="connect">
+    <h2>How the pieces connect</h2>
+    <div class="prose"><p>Messages move left to right, from forecasts to households, and pass through one human approval point. Information comes back along the bottom into the community layer, where the program uses it and agencies above the community can pull it.</p></div>
+    <figure class="dg-fig">
+      <div class="dg-scroll">
+      <svg class="dg" viewBox="0 0 1040 490" role="img" aria-label="Flow diagram. Forecast data goes to the AI agent, which drafts for the custodian; official NWS and county wording goes straight to the custodian. The custodian approves the public brief and the deeper look, which travel through five kinds of trusted local channels to households and trained observers. Observers' reports, pulse surveys, and receipts flow back into the community layer, which sends summaries to the custodian, points responders to unconfirmed zones, and can be pulled by the NWS and county.">
+        <defs>
+          <marker id="dgA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dg-mk"/></marker>
+          <marker id="dgB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dg-mk-back"/></marker>
+          <marker id="dgC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="dg-mk-acc"/></marker>
+        </defs>
+
+        <!-- column headers -->
+        <g class="dg-h">
+          <text x="110" y="24" text-anchor="middle">SOURCES</text>
+          <text x="375" y="24" text-anchor="middle">DRAFT AND APPROVE</text>
+          <text x="585" y="24" text-anchor="middle">PRODUCTS</text>
+          <text x="800" y="24" text-anchor="middle">TRUSTED LOCAL CHANNELS</text>
+          <text x="972" y="24" text-anchor="middle">PEOPLE</text>
+        </g>
+
+        <!-- sources -->
+        <rect class="dg-box" x="20" y="60" width="180" height="72" rx="6"/>
+        <text class="dg-t" x="110" y="86" text-anchor="middle">Forecast data</text>
+        <text class="dg-s" x="110" y="104" text-anchor="middle">GEOGLOWS, NWM, CBRFC</text>
+        <text class="dg-s" x="110" y="120" text-anchor="middle">NRCS snow, USGS gauges</text>
+
+        <rect class="dg-box" x="20" y="190" width="180" height="72" rx="6"/>
+        <text class="dg-t" x="110" y="216" text-anchor="middle">Official warnings</text>
+        <text class="dg-s" x="110" y="234" text-anchor="middle">NWS Salt Lake City</text>
+        <text class="dg-s" x="110" y="250" text-anchor="middle">Millard County EM</text>
+
+        <!-- draft and approve -->
+        <rect class="dg-box" x="290" y="60" width="170" height="72" rx="6"/>
+        <text class="dg-t" x="375" y="86" text-anchor="middle">AI agent</text>
+        <text class="dg-s" x="375" y="104" text-anchor="middle">drafts, translates,</text>
+        <text class="dg-s" x="375" y="120" text-anchor="middle">summarizes</text>
+
+        <rect class="dg-key" x="290" y="190" width="170" height="72" rx="6"/>
+        <text class="dg-t" x="375" y="216" text-anchor="middle">Custodian</text>
+        <text class="dg-s" x="375" y="234" text-anchor="middle">Extension and library</text>
+        <text class="dg-s" x="375" y="250" text-anchor="middle">approves every send</text>
+
+        <!-- products -->
+        <rect class="dg-box" x="510" y="100" width="150" height="60" rx="6"/>
+        <text class="dg-t" x="585" y="125" text-anchor="middle">Public brief</text>
+        <text class="dg-s" x="585" y="143" text-anchor="middle">and texts, EN and ES</text>
+
+        <rect class="dg-box" x="510" y="200" width="150" height="60" rx="6"/>
+        <text class="dg-t" x="585" y="225" text-anchor="middle">Deeper look</text>
+        <text class="dg-s" x="585" y="243" text-anchor="middle">for Layer 2</text>
+
+        <!-- channels -->
+        <g>
+          <rect class="dg-box" x="720" y="40" width="160" height="46" rx="6"/>
+          <text class="dg-c" x="800" y="68" text-anchor="middle">Library, Extension</text>
+          <rect class="dg-box" x="720" y="96" width="160" height="46" rx="6"/>
+          <text class="dg-c" x="800" y="124" text-anchor="middle">Wards, congregations</text>
+          <rect class="dg-box" x="720" y="152" width="160" height="46" rx="6"/>
+          <text class="dg-c" x="800" y="180" text-anchor="middle">Radio, paper, stores</text>
+          <rect class="dg-box" x="720" y="208" width="160" height="46" rx="6"/>
+          <text class="dg-c" x="800" y="236" text-anchor="middle">Schools, care, farms</text>
+          <rect class="dg-box" x="720" y="264" width="160" height="46" rx="6"/>
+          <text class="dg-c" x="800" y="292" text-anchor="middle">Fire, sheriff, roads</text>
+        </g>
+
+        <!-- people -->
+        <rect class="dg-box" x="920" y="105" width="105" height="60" rx="6"/>
+        <text class="dg-t" x="972" y="130" text-anchor="middle">Households</text>
+        <text class="dg-s" x="972" y="148" text-anchor="middle">act</text>
+        <rect class="dg-box" x="920" y="215" width="105" height="60" rx="6"/>
+        <text class="dg-t" x="972" y="240" text-anchor="middle">Observers</text>
+        <text class="dg-s" x="972" y="258" text-anchor="middle">watch, report</text>
+
+        <!-- community layer -->
+        <rect class="dg-key" x="500" y="410" width="200" height="64" rx="6"/>
+        <text class="dg-t" x="600" y="436" text-anchor="middle">Community layer</text>
+        <text class="dg-s" x="600" y="455" text-anchor="middle">Survey123, hosted by Extension</text>
+
+        <!-- outbound -->
+        <line class="dg-line" x1="200" y1="96" x2="288" y2="96" marker-end="url(#dgA)"/>
+        <text class="dg-l" x="244" y="88" text-anchor="middle">forecasts</text>
+
+        <line class="dg-line" x1="375" y1="132" x2="375" y2="188" marker-end="url(#dgA)"/>
+        <text class="dg-l" x="383" y="164">drafts</text>
+
+        <line class="dg-line dg-acc" x1="200" y1="226" x2="288" y2="226" marker-end="url(#dgC)"/>
+        <text class="dg-l dg-acc-t" x="244" y="218" text-anchor="middle">word for word</text>
+
+        <line class="dg-line" x1="460" y1="214" x2="508" y2="140" marker-end="url(#dgA)"/>
+        <line class="dg-line" x1="460" y1="230" x2="508" y2="230" marker-end="url(#dgA)"/>
+        <text class="dg-l" x="484" y="248" text-anchor="middle">approved</text>
+
+        <!-- product to channels bracket -->
+        <line class="dg-line" x1="660" y1="130" x2="700" y2="130"/>
+        <line class="dg-line" x1="660" y1="230" x2="700" y2="230"/>
+        <line class="dg-line" x1="700" y1="63" x2="700" y2="287"/>
+        <line class="dg-line" x1="700" y1="63" x2="718" y2="63" marker-end="url(#dgA)"/>
+        <line class="dg-line" x1="700" y1="119" x2="718" y2="119" marker-end="url(#dgA)"/>
+        <line class="dg-line" x1="700" y1="175" x2="718" y2="175" marker-end="url(#dgA)"/>
+        <line class="dg-line" x1="700" y1="231" x2="718" y2="231" marker-end="url(#dgA)"/>
+        <line class="dg-line" x1="700" y1="287" x2="718" y2="287" marker-end="url(#dgA)"/>
+
+        <!-- channels to people bracket -->
+        <line class="dg-line" x1="880" y1="63" x2="900" y2="63"/>
+        <line class="dg-line" x1="880" y1="119" x2="900" y2="119"/>
+        <line class="dg-line" x1="880" y1="175" x2="900" y2="175"/>
+        <line class="dg-line" x1="880" y1="231" x2="900" y2="231"/>
+        <line class="dg-line" x1="880" y1="287" x2="900" y2="287"/>
+        <line class="dg-line" x1="900" y1="63" x2="900" y2="287"/>
+        <line class="dg-line" x1="900" y1="135" x2="918" y2="135" marker-end="url(#dgA)"/>
+        <line class="dg-line" x1="900" y1="245" x2="918" y2="245" marker-end="url(#dgA)"/>
+        <text class="dg-l" x="900" y="330" text-anchor="middle">two or more paths</text>
+        <text class="dg-l" x="900" y="344" text-anchor="middle">per household</text>
+
+        <!-- return paths -->
+        <path class="dg-line dg-back" d="M972 275 L972 442 L702 442" marker-end="url(#dgB)"/>
+        <text class="dg-l" x="836" y="434" text-anchor="middle">reports, pulse, receipts</text>
+
+        <path class="dg-line dg-back" d="M680 410 L680 372 L800 372 L800 312" marker-end="url(#dgB)"/>
+        <text class="dg-l" x="740" y="388" text-anchor="middle">unconfirmed zones</text>
+
+        <path class="dg-line dg-back" d="M500 425 L375 425 L375 264" marker-end="url(#dgB)"/>
+        <text class="dg-l" x="437" y="417" text-anchor="middle">summaries, gaps</text>
+
+        <path class="dg-line dg-back" d="M500 458 L110 458 L110 264" marker-end="url(#dgB)"/>
+        <text class="dg-l" x="300" y="450" text-anchor="middle">agencies pull (view access)</text>
+      </svg>
+      </div>
+      <figcaption class="caption">Solid arrows carry messages out to people. Dashed arrows carry information back. The blue arrow is the echo rule: official warning wording reaches the custodian unchanged, and the agent only adds local detail around it. The two outlined boxes (the custodian and the community layer) are where the program holds control and data.</figcaption>
+    </figure>
+  </section>
+
+  <section id="tsp">
+    <h2>Tools, spaces, and places</h2>
+    <div class="prose"><p>The work happens in three kinds of settings. <b>Tools</b> are the data and software that produce and handle information. <b>Spaces</b> are the shared channels (digital and social) where messages travel. <b>Places</b> are the physical locations where people meet the program in person.</p></div>
+    <div class="tsp">
+      <div>
+        <h3>Tools <span class="kicker">data and software</span></h3>
+        <ul>
+          <li><b>Forecast sources</b><span>GEOGLOWS ensembles, the National Water Model, CBRFC river and seasonal forecasts, NWS watches and warnings, NRCS snowpack, USGS gauges</span></li>
+          <li><b>The community layer</b><span>ArcGIS Survey123 for observer reports and the pulse survey; ArcGIS Hub for the website; ArcGIS Dashboards at three levels</span></li>
+          <li><b>The AI agent</b><span>Drafts the brief and deeper look in English and Spanish, summarizes reports, and flags gaps for the custodian to approve</span></li>
+          <li><b>Message tools</b><span>Text-list service, QR codes and short links for each channel, a print template for the brief</span></li>
+          <li><b>Backup gear</b><span>NOAA Weather Radios, ham radio (ARES), staff gauges painted on bridge piers</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Spaces <span class="kicker">shared channels</span></h3>
+        <ul>
+          <li><b>Program website</b><span>The public brief, the deeper look, maps, and the report form (Layer 1 and Layer 2)</span></li>
+          <li><b>Text list</b><span>English and Spanish lists, sent at outlook, watch, and warning</span></li>
+          <li><b>Relational channels</b><span>Ward emails and ministering contacts, congregation group chats, town Facebook groups, phone trees</span></li>
+          <li><b>Broadcast</b><span>The local paper, regional radio, school text alerts</span></li>
+          <li><b>Observer network</b><span>A shared Survey123 group and a monthly digest for trained Layer 2 members</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Places <span class="kicker">physical locations</span></h3>
+        <ul>
+          <li><b>Library disaster corner</b><span>Standing education, the current brief, sign-ups, and plan nights (the anchor place)</span></li>
+          <li><b>Extension office</b><span>Training sessions, workshops, and the custodian's desk for the community layer</span></li>
+          <li><b>Ward buildings and churches</b><span>Announcements, sandbag crew sign-ups, and possible refuges</span></li>
+          <li><b>Fire station</b><span>Equipment staging, drills, and a brief posted on the door</span></li>
+          <li><b>Everyday stops</b><span>Feed store, grocery, gas stations, and the post office, each with its own QR code on a posted brief</span></li>
+          <li><b>Custodial sites</b><span>Schools, care centers, and farms with worker housing, each with its own trigger checklist</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="brief">
+    <h2>The one-page public brief</h2>
+    <div class="mock">
+      <article class="paper bulletin" aria-label="Mock public brief">
+        <div class="b-top">
+          <div>
+            <div class="b-org">Delta Flood Ready (Listo Delta)</div>
+            <div class="ladder" aria-label="Readiness tier"><span>Standing</span><span>Outlook</span><span class="on">Watch</span><span>Warning</span></div>
+          </div>
+          <div style="text-align:right">
+            <span class="tierchip watch">Flood watch</span>
+            <div style="font-size:11px;color:var(--paper-gray);margin-top:4px">Brief 7, Wednesday, May 6</div>
+          </div>
+        </div>
+        <div class="b-head">The Sevier River is rising and may reach flood level by Saturday.</div>
+        <div class="b-map" id="bulletinMap"></div>
+        <div class="b-cols">
+          <div>
+            <h4>What this means for you</h4>
+            <ul>
+              <li>Fields and roads near Gunnison Bend and north of Main Street may flood.</li>
+              <li>The river road crossing north of town may close this weekend.</li>
+              <li>Town streets south of Main are not expected to flood.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>What to do now</h4>
+            <ul>
+              <li>Move equipment, stock, and vehicles out of the shaded areas.</li>
+              <li>Check your family plan and your neighbors' plans.</li>
+              <li>Sign up for flood texts at the library or by the QR code.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="b-es" lang="es">
+          <div class="b-heades">El río Sevier está subiendo y podría inundar zonas bajas para el sábado.</div>
+          <div>Pueden inundarse los campos y caminos cerca de Gunnison Bend y al norte de Main Street. <b>Ahora:</b> mueva equipo, animales y vehículos fuera de las zonas sombreadas, revise su plan familiar y regístrese para recibir mensajes de texto.</div>
+        </div>
+        <div class="b-foot">
+          <svg class="qr" id="qr" viewBox="0 0 25 25" aria-label="QR code placeholder"></svg>
+          <div><b style="color:var(--paper-ink)">Official source:</b> National Weather Service Salt Lake City flood watch, repeated word for word at the QR link, with Millard County Emergency Management. This brief adds local detail only. <b style="color:var(--paper-ink)">In an emergency, call 911.</b> Scan for the deeper look and to report conditions.</div>
+        </div>
+      </article>
+      <div class="side">
+        <h3>How it's built</h3>
+        <ul>
+          <li><b>Same layout at every tier.</b> Only the tier ladder, chip color, headline, map shading, and actions change, so people learn to read it in the slow months.</li>
+          <li><b>One headline in plain words.</b> No river stages or flows on the public page; those live in the deeper look.</li>
+          <li><b>Two short columns:</b> "what this means for you" and "what to do now."</li>
+          <li><b>Spanish on the same page,</b> not on a separate sheet.</li>
+          <li><b>Official source named,</b> so the brief always echoes the NWS and the county.</li>
+          <li><b>A QR code for each channel.</b> The copy at the feed store gets a different code from the one at the library, which measures reach.</li>
+        </ul>
+        <h3 style="margin-top:8px">The same message as a text</h3>
+        <div class="phone" aria-label="Mock text message">
+          <div class="from">Delta Flood Ready</div>
+          <div class="bubble"><b>FLOOD WATCH</b> (NWS Salt Lake City): Sevier River may reach flood level by Sat. Low fields near Gunnison Bend and north of Main St may flood. Now: move equipment, check your plan. Brief: deltaflood.example/b7</div>
+          <div class="bubble" lang="es"><b>VIGILANCIA DE INUNDACIÓN</b> (NWS): El río Sevier podría inundar zonas bajas para el sábado. Mueva equipo y revise su plan. deltaflood.example/b7es</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>The map</h2>
+    <div class="prose">
+      <p>The brief's map is deliberately simple: the river, the reservoirs, the canals, the town, the roads that matter, and three shaded zones. It names <b>places people know</b> (Main Street, Gunnison Bend, the river road crossing) and shows where the library, fire station, and higher ground are. The website version below lets readers move between flow levels.</p>
+      <p class="caption">The map is a schematic drawn for this mockup. It is not to scale, and the zones are not real inundation estimates. A working version would draw on NWM or GEOGLOWS-based flood inundation mapping, checked against what happened locally in 1983 and 2023.</p>
+    </div>
+    <div class="paper" style="padding:12px;max-width:760px" id="bigMap"></div>
+  </section>
+
+  <section id="website">
+    <h2>A section of the program website</h2>
+    <div class="prose"><p>This is the <b>deeper look</b> page for Layer 2 members and curious residents. It shows the tier, the river picture with its uncertainty, what is feeding the river, flood maps at several flows, and the report form that feeds the community layer. Try the tier buttons, the flow slider, and the report form.</p></div>
+    <div class="paper site">
+      <div class="site-bar" aria-hidden="true"><i></i><i></i><i></i><span class="url">deltaflood.example/deeper-look</span></div>
+      <nav class="site-nav" aria-label="Mock site navigation">
+        <span class="brand">Delta Flood Ready</span>
+        <span>This week's brief</span><span class="cur">Deeper look</span><span>Report a condition</span><span>Get ready</span><span>Español</span>
+      </nav>
+      <div class="site-body">
+        <div style="display:grid;gap:10px">
+          <div class="tierbar" role="group" aria-label="Readiness tier">
+            <button type="button" id="t-standing" data-t="standing" aria-pressed="false">Standing</button>
+            <button type="button" id="t-outlook" data-t="outlook" aria-pressed="false">Outlook</button>
+            <button type="button" id="t-watch" data-t="watch" aria-pressed="true">Watch (now)</button>
+            <button type="button" id="t-warning" data-t="warning" aria-pressed="false">Warning</button>
+          </div>
+          <div class="tierdesc" id="tierdesc"></div>
+        </div>
+
+        <div class="cardrow">
+          <div class="panel chart">
+            <h4>The river picture</h4>
+            <div class="sub">Sevier River flow at the Delta-area gauge, cubic feet per second (illustrative)</div>
+            <div id="hydro"></div>
+            <div class="legend">
+              <span><i style="background:#1F1F1F"></i>Observed</span>
+              <span><i style="background:#0047BA"></i>Forecast, middle</span>
+              <span><i style="background:rgba(0,71,186,.18)"></i>Range of likely outcomes</span>
+              <span><i style="background:#9A5B00"></i>Flood flow</span>
+              <span><i style="background:#7C878E"></i>2023 peak</span>
+            </div>
+          </div>
+          <div class="panel">
+            <h4>What's feeding it</h4>
+            <div class="bars" id="bars"></div>
+            <h4 style="margin-top:6px">How sure are we?</h4>
+            <div class="confidence">
+              <p><b>Fairly sure the river rises</b> through the weekend. Most forecast runs cross flood flow by Saturday.</p>
+              <p><b>Less sure how high.</b> A warm spell would push it toward the top of the range; a cool weekend toward the bottom.</p>
+              <p class="sub">Sources: NWS, CBRFC, NRCS, USGS, GEOGLOWS, NWM. Links at the bottom of the page.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardrow">
+          <div class="panel">
+            <h4>If the river reaches…</h4>
+            <div class="slider">
+              <label for="flow" class="sub">Move the slider to see what floods at each flow</label>
+              <input id="flow" type="range" min="0" max="2" step="1" value="1" aria-describedby="flownote">
+              <div class="ticks"><span>1,800 cfs</span><span>2,400 cfs</span><span>3,000 cfs</span></div>
+            </div>
+            <div class="mapbox" id="siteMap"></div>
+            <div class="mapnote" id="flownote" aria-live="polite"></div>
+          </div>
+          <div class="panel">
+            <h4>Report a condition</h4>
+            <div class="sub">For trained observers. Reports go to the shared community layer, where the county and the Weather Service can see them.</div>
+            <form class="report" id="reportForm">
+              <label for="rtype">What did you see?
+                <select id="rtype">
+                  <option>Water over a road</option>
+                  <option>Seepage or a wet spot on a canal bank</option>
+                  <option>River level at a staff gauge</option>
+                  <option>Debris at a bridge or culvert</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <div class="two">
+                <label for="rwhere">Where?<input id="rwhere" type="text" value="Canal at 4500 West"></label>
+                <label for="rwhen">When?<input id="rwhen" type="text" value="Today, 7:40 a.m."></label>
+              </div>
+              <label for="rnote">Details<textarea id="rnote" rows="3">Damp ground on the outside of the bank, about 30 feet long. No running water yet.</textarea></label>
+              <label for="rphoto">Photo (optional)<input id="rphoto" type="file" accept="image/*"></label>
+              <button class="btn" type="submit" id="rsubmit">Send report</button>
+              <div class="ok" id="rok" hidden>Saved to the community layer. (Demo only: nothing was sent.)</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="corner">
+    <h2>The library disaster corner</h2>
+    <div class="prose"><p>A standing space of about 12 by 16 feet in the Delta City Library. It works year-round as an education space and turns into the town's flood information point as the tiers rise. Nothing in it is expensive: a bulletin wall, a map table, a shelf, a rack, a tablet, and a few chairs.</p></div>
+    <div class="paper plan" style="padding:14px">
+      <svg viewBox="0 0 680 430" role="img" aria-labelledby="planTitle">
+        <title id="planTitle">Floor plan of the library disaster corner</title>
+        <rect x="0" y="0" width="680" height="430" fill="#FFFFFF"/>
+        <!-- floor -->
+        <rect x="40" y="40" width="600" height="350" fill="#F7F8F9"/>
+        <!-- walls -->
+        <path d="M40 390 L40 40 L640 40" fill="none" stroke="#002E5D" stroke-width="8" stroke-linecap="square"/>
+        <path d="M640 40 L640 120" fill="none" stroke="#002E5D" stroke-width="8"/>
+        <rect x="300" y="34" width="120" height="12" fill="#CFE0F3" stroke="#002E5D" stroke-width="1.5"/>
+        <text x="360" y="28" text-anchor="middle" font-family="Arial" font-size="11" fill="#4A4A4A">window</text>
+        <path d="M640 120 L640 390" fill="none" stroke="#9AA3AA" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <text x="652" y="260" font-family="Arial" font-size="11" fill="#4A4A4A" transform="rotate(90 652 260)">open to the reading room</text>
+        <text x="340" y="414" text-anchor="middle" font-family="Arial" font-size="11" fill="#4A4A4A">entry from the library's main aisle (wheelchair-accessible path, 5 ft clear)</text>
+        <!-- 1 wall display -->
+        <rect x="70" y="50" width="210" height="18" fill="#002E5D"/>
+        <rect x="70" y="68" width="210" height="26" fill="#FFFFFF" stroke="#D5D7D9"/>
+        <rect x="78" y="73" width="26" height="16" fill="#9A5B00"/>
+        <rect x="110" y="73" width="74" height="16" fill="#EEF0EC" stroke="#D5D7D9"/>
+        <rect x="190" y="73" width="84" height="16" fill="#EEF0EC" stroke="#D5D7D9"/>
+        <!-- 2 map table -->
+        <rect x="230" y="160" width="220" height="120" rx="6" fill="#FFFFFF" stroke="#002E5D" stroke-width="2"/>
+        <path d="M240 255 C290 230 330 220 370 200 C400 185 420 180 440 172" fill="none" stroke="#2F6DB5" stroke-width="4"/>
+        <path d="M240 255 C290 230 330 220 370 200 C400 185 420 180 440 172" fill="none" stroke="#0047BA" stroke-opacity=".18" stroke-width="22"/>
+        <rect x="330" y="225" width="40" height="30" fill="#D9DCDF"/>
+        <!-- stools around table -->
+        <g fill="#FFFFFF" stroke="#7C878E" stroke-width="1.5">
+          <circle cx="260" cy="145" r="10"/><circle cx="340" cy="145" r="10"/><circle cx="420" cy="145" r="10"/>
+          <circle cx="260" cy="295" r="10"/><circle cx="420" cy="295" r="10"/>
+        </g>
+        <!-- 3 kit shelf on left wall -->
+        <rect x="46" y="120" width="40" height="150" fill="#FFFFFF" stroke="#002E5D" stroke-width="2"/>
+        <g fill="#D5D7D9"><rect x="52" y="130" width="28" height="22"/><rect x="52" y="160" width="28" height="22"/><rect x="52" y="190" width="28" height="22"/><rect x="52" y="220" width="28" height="22"/></g>
+        <!-- 4 weather radio on shelf -->
+        <rect x="52" y="248" width="28" height="16" rx="3" fill="#002E5D"/>
+        <!-- 5 take-home rack near entry -->
+        <rect x="520" y="300" width="100" height="26" fill="#FFFFFF" stroke="#002E5D" stroke-width="2"/>
+        <g fill="#0047BA" fill-opacity=".35"><rect x="526" y="304" width="14" height="18"/><rect x="546" y="304" width="14" height="18"/><rect x="566" y="304" width="14" height="18"/><rect x="586" y="304" width="14" height="18"/></g>
+        <!-- 6 sign-up kiosk -->
+        <rect x="540" y="70" width="70" height="44" rx="4" fill="#FFFFFF" stroke="#002E5D" stroke-width="2"/>
+        <rect x="552" y="78" width="46" height="28" rx="2" fill="#1F1F1F"/>
+        <!-- 7 plan-night seating -->
+        <g fill="#FFFFFF" stroke="#7C878E" stroke-width="1.5">
+          <rect x="500" y="170" width="22" height="22" rx="3"/><rect x="530" y="160" width="22" height="22" rx="3"/><rect x="560" y="160" width="22" height="22" rx="3"/><rect x="590" y="170" width="22" height="22" rx="3"/>
+          <rect x="510" y="205" width="22" height="22" rx="3"/><rect x="545" y="198" width="22" height="22" rx="3"/><rect x="580" y="205" width="22" height="22" rx="3"/>
+        </g>
+        <!-- 8 kids nook -->
+        <circle cx="140" cy="330" r="44" fill="#EEF0EC" stroke="#7C878E" stroke-width="1.5"/>
+        <!-- markers -->
+        <g font-family="Arial" font-size="12" font-weight="700" text-anchor="middle">
+          <g><circle cx="175" cy="110" r="12" fill="#002E5D"/><text x="175" y="114" fill="#FFFFFF">1</text></g>
+          <g><circle cx="340" cy="190" r="12" fill="#002E5D"/><text x="340" y="194" fill="#FFFFFF">2</text></g>
+          <g><circle cx="110" cy="160" r="12" fill="#002E5D"/><text x="110" y="164" fill="#FFFFFF">3</text></g>
+          <g><circle cx="110" cy="256" r="12" fill="#002E5D"/><text x="110" y="260" fill="#FFFFFF">4</text></g>
+          <g><circle cx="570" cy="350" r="12" fill="#002E5D"/><text x="570" y="354" fill="#FFFFFF">5</text></g>
+          <g><circle cx="575" cy="135" r="12" fill="#002E5D"/><text x="575" y="139" fill="#FFFFFF">6</text></g>
+          <g><circle cx="556" cy="250" r="12" fill="#002E5D"/><text x="556" y="254" fill="#FFFFFF">7</text></g>
+          <g><circle cx="140" cy="330" r="12" fill="#002E5D"/><text x="140" y="334" fill="#FFFFFF">8</text></g>
+        </g>
+        <!-- scale -->
+        <g font-family="Arial" font-size="10" fill="#4A4A4A">
+          <line x1="440" y1="372" x2="590" y2="372" stroke="#4A4A4A"/><line x1="440" y1="367" x2="440" y2="377" stroke="#4A4A4A"/><line x1="590" y1="367" x2="590" y2="377" stroke="#4A4A4A"/>
+          <text x="515" y="366" text-anchor="middle">about 4 ft</text>
+        </g>
+      </svg>
+    </div>
+    <div class="key">
+      <div><span class="k">1</span><p><b>"The Sevier Now" wall</b><span>Tier light, this week's brief in both languages, and a season chart of snowpack and river flow that staff update at each brief.</span></p></div>
+      <div><span class="k">2</span><p><b>Map table</b><span>A laminated flood map of Delta under glass, with markers so families can find their home, their route out, and their meeting place.</span></p></div>
+      <div><span class="k">3</span><p><b>Ready shelf</b><span>A model go-bag, sandbag how-to cards, and a "documents to copy" checklist. Display only; the take-home versions are on the rack.</span></p></div>
+      <div><span class="k">4</span><p><b>Weather radio demo</b><span>A NOAA Weather Radio set up to show how alerts sound, with a sign about where to get one.</span></p></div>
+      <div><span class="k">5</span><p><b>Take-home rack</b><span>Copies of the current brief, family plan templates, alert sign-up cards, and Layer 2 training flyers, in English and Spanish.</span></p></div>
+      <div><span class="k">6</span><p><b>Sign-up tablet</b><span>Text-list sign-up, the pulse survey, and Layer 2 volunteer interest. Library staff can help at the desk.</span></p></div>
+      <div><span class="k">7</span><p><b>Plan-night seating</b><span>Folding chairs for monthly plan nights, Extension workshops, and Layer 2 training, facing the wall display.</span></p></div>
+      <div><span class="k">8</span><p><b>Kids' nook</b><span>Picture books on weather and floods and a "pack your own go-bag" activity, so families come together.</span></p></div>
+    </div>
+    <h3 style="margin-top:12px">How the corner changes with the tier</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Wall and table</th><th>Staff and programs</th><th>Hours and use</th></tr></thead>
+        <tbody>
+          <tr><td>Standing</td><td>Last season's story, the 1983 and 2023 maps, the alert-system diagram</td><td>Monthly plan nights; Layer 2 training with Extension</td><td>Normal hours</td></tr>
+          <tr><td>Outlook</td><td>Monthly Sevier outlook brief; snowpack chart starts updating</td><td>Brief explained at story time and plan night; sign-up push</td><td>Normal hours</td></tr>
+          <tr><td>Watch</td><td>Weekly brief; map table shows the shaded zones; tier light amber</td><td>Staff field questions with the agent's Q&amp;A sheet; sandbag crew sign-ups</td><td>Possible extended evening hours</td></tr>
+          <tr><td>Warning</td><td>Official warning posted word for word with the local map</td><td>Staff relay the warning on library channels; phone and charging station</td><td>Refuge and information point if the building is safe</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2>Sources the deeper look links to</h2>
+    <div class="prose">
+      <p class="caption">In a real build, each would link to the live product for the Sevier basin: NWS Salt Lake City watches and warnings; Colorado Basin River Forecast Center river and water-supply forecasts; NRCS snow survey and SNOTEL; USGS streamflow gauges; GEOGLOWS River Forecast System; and the National Water Model. Links are left out of this mockup on purpose.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  // ---------- map (shared by the brief and the website) ----------
+  const RIVER = "M 600 70 C 560 88 528 104 500 118 C 452 142 392 160 330 186 C 290 203 252 216 214 232 C 176 250 128 300 70 420";
+  const ZONES = [
+    {w:22, label:"1,800 cfs"},
+    {w:44, label:"2,400 cfs"},
+    {w:72, label:"3,000 cfs"}
+  ];
+  function mapSVG(id, level, compact){
+    const fs = compact ? 13 : 12;
+    let zones = "";
+    for (let i = ZONES.length - 1; i >= 0; i--){
+      const on = i <= level;
+      zones += `<path class="fz" d="${RIVER}" fill="none" stroke="#0047BA" stroke-opacity="${on ? (0.16 + (level - i) * 0.07) : 0}" stroke-width="${ZONES[i].w * 2}" stroke-linecap="round"/>`;
+    }
+    const roadClosed = level >= 1;
+    const mainSt = level >= 2;
+    return `<svg viewBox="0 0 600 400" role="img" aria-labelledby="${id}-t"><title id="${id}-t">Schematic flood map of Delta, Utah, at ${ZONES[level].label}</title>
+      <rect width="600" height="400" fill="#EEF0EC"/>
+      <rect x="270" y="0" width="330" height="400" fill="#E6EAE3" opacity=".6"/>
+      ${zones}
+      <path d="${RIVER}" fill="none" stroke="#2F6DB5" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="520" cy="110" rx="46" ry="20" fill="#2F6DB5" transform="rotate(-24 520 110)"/>
+      <ellipse cx="205" cy="238" rx="38" ry="17" fill="#2F6DB5" transform="rotate(-28 205 238)"/>
+      <path d="M 500 126 C 470 190 430 236 360 280 L 230 330 L 120 352" fill="none" stroke="#5B8FC9" stroke-width="2.5" stroke-dasharray="7 5"/>
+      <g fill="#D9DCDF" stroke="#C3C8CC">
+        <rect x="318" y="236" width="40" height="30"/><rect x="364" y="236" width="40" height="30"/><rect x="410" y="236" width="40" height="30"/>
+        <rect x="318" y="272" width="40" height="30"/><rect x="364" y="272" width="40" height="30"/><rect x="410" y="272" width="40" height="30"/>
+        <rect x="318" y="308" width="40" height="30"/><rect x="364" y="308" width="40" height="30"/>
+      </g>
+      <path d="M 0 312 L 600 250" stroke="#7C878E" stroke-width="4"/>
+      <path d="M 300 229 L 470 229" stroke="${mainSt ? '#B42318' : '#7C878E'}" stroke-width="3" ${mainSt ? 'stroke-dasharray="6 4"' : ''}/>
+      <path d="M 432 229 L 432 150 L 470 40 L 482 0" stroke="#7C878E" stroke-width="3" fill="none"/>
+      ${roadClosed ? '<g><circle cx="438" cy="146" r="11" fill="#B42318"/><path d="M432 146 L444 146" stroke="#fff" stroke-width="3"/></g>' : ''}
+      <g font-family="Arial" font-size="${fs}" fill="#1F1F1F">
+        <text x="486" y="74" font-weight="700" fill="#1D4E89">DMAD Reservoir</text>
+        <text x="118" y="206" font-weight="700" fill="#1D4E89">Gunnison Bend</text>
+                <text x="236" y="168" font-style="italic" fill="#1D4E89" transform="rotate(-20 236 168)">Sevier River</text>
+        <text x="366" y="356" font-weight="700" font-size="${fs+2}">Delta</text>
+        <text x="472" y="226" font-size="${fs-1}" fill="#4A4A4A">Main St</text>
+        <text x="20" y="300" font-size="${fs-1}" fill="#4A4A4A" transform="rotate(-6 20 300)">US-6 / US-50</text>
+        <text x="424" y="170" text-anchor="end" font-size="${fs-1}" fill="#4A4A4A">river road crossing</text>
+        <text x="132" y="368" font-size="${fs-1}" fill="#1D4E89">canal</text>
+      </g>
+      <g font-family="Arial" font-size="${fs-1}" font-weight="700">
+        <g><rect x="371" y="283" width="12" height="12" fill="#002E5D"/><text x="388" y="293" fill="#002E5D">Library</text></g>
+        <g><rect x="417" y="247" width="12" height="12" fill="#B42318"/><text x="434" y="257" fill="#B42318" font-size="${fs-2}">Fire</text></g>
+      </g>
+      <g font-family="Arial" font-size="${fs-1}" fill="#1E6B3A" font-weight="700">
+        <path d="M 520 330 L 520 382" stroke="#1E6B3A" stroke-width="3" marker-end="url(#${id}-ar)"/>
+        <text x="510" y="360" text-anchor="end">Higher ground</text>
+      </g>
+      <defs><marker id="${id}-ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1E6B3A"/></marker></defs>
+      <g font-family="Arial" font-size="${fs-2}" fill="#1F1F1F">
+        <rect x="10" y="10" width="${compact ? 190 : 176}" height="${compact ? 66 : 62}" fill="#FFFFFF" fill-opacity=".92" stroke="#D5D7D9"/>
+        <rect x="18" y="20" width="18" height="10" fill="#0047BA" fill-opacity=".38"/><text x="42" y="29">Likely to flood</text>
+        <rect x="18" y="38" width="18" height="10" fill="#0047BA" fill-opacity=".18"/><text x="42" y="47">Could flood</text>
+        <circle cx="27" cy="62" r="6" fill="#B42318"/><text x="42" y="66">Road may close</text>
+      </g>
+    </svg>`;
+  }
+  document.getElementById("bulletinMap").innerHTML = mapSVG("bm", 1, true);
+  document.getElementById("bigMap").innerHTML = mapSVG("big", 1, false);
+
+  const flow = document.getElementById("flow");
+  const siteMap = document.getElementById("siteMap");
+  const flownote = document.getElementById("flownote");
+  const NOTES = [
+    "<b>1,800 cfs:</b> the river fills its banks. Low pasture right along the river and below Gunnison Bend gets wet. No roads close.",
+    "<b>2,400 cfs (this week's forecast range):</b> fields near Gunnison Bend and along the river flood. The river road crossing north of town may close.",
+    "<b>3,000 cfs (above the 2023 peak):</b> water reaches the low blocks north of Main Street. Main Street east of the library may close. Move to higher ground south of US-6."
+  ];
+  function drawFlow(){ const v = +flow.value; siteMap.innerHTML = mapSVG("sm", v, false); flownote.innerHTML = NOTES[v]; }
+  flow.addEventListener("input", drawFlow); drawFlow();
+
+  // ---------- tier buttons ----------
+  const TIERS = {
+    standing:"<b>Standing.</b> No flood expected. The corner, plan nights, and Layer 2 training keep the network ready. Observers send a monthly check-in.",
+    outlook:"<b>Outlook (January to March).</b> Snowpack is well above normal. Monthly briefs show the season building. GEOGLOWS ensembles and CBRFC water-supply forecasts lead here.",
+    watch:"<b>Watch (now).</b> The NWS has a flood watch out and reservoirs are near full. Weekly briefs, warmed-up phone trees, staged crews, and a request for observer reports twice a week.",
+    warning:"<b>Warning.</b> The NWS warning is repeated word for word with the local map. Phone trees run, responders close roads, and the library opens as an information point if it is safe."
+  };
+  const tdesc = document.getElementById("tierdesc");
+  document.querySelectorAll(".tierbar button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".tierbar button").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+    tdesc.innerHTML = TIERS[b.dataset.t];
+  }));
+  tdesc.innerHTML = TIERS.watch;
+
+  // ---------- hydrograph ----------
+  const days = ["May 1","2","3","4","5","May 6","7","8","9","10","11","12","13","14","15","May 16"];
+  const obs = [1420,1510,1600,1690,1780,1880];
+  const mid = [null,null,null,null,null,1880,1980,2090,2190,2280,2340,2360,2320,2240,2130,2010];
+  const W = 560, H = 270, L = 48, R = 12, T = 14, B = 34;
+  const x = i => L + i * (W - L - R) / (days.length - 1);
+  const y = v => T + (H - T - B) * (1 - v / 3200);
+  let lo = [], hi = [];
+  for (let i = 5; i < days.length; i++){ const s = (i - 5) * 52; lo.push([i, mid[i] - s]); hi.push([i, mid[i] + s * 1.3]); }
+  const band = "M" + hi.map(([i,v]) => `${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" L ") + " L " + lo.slice().reverse().map(([i,v]) => `${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" L ") + " Z";
+  const oLine = obs.map((v,i) => `${i ? "L" : "M"}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" ");
+  const mLine = mid.map((v,i) => v == null ? "" : `${i === 5 ? "M" : "L"}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" ");
+  let grid = "";
+  for (let v = 0; v <= 3200; v += 800){ grid += `<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#E6E8EA"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end">${v.toLocaleString()}</text>`; }
+  let xl = "";
+  [0,5,10,15].forEach(i => { xl += `<text x="${x(i)}" y="${H-12}" text-anchor="middle">${i===5?"Today, May 6":days[i].length<3?"May "+days[i]:days[i]}</text>`; });
+  document.getElementById("hydro").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Forecast hydrograph: observed flow rising from 1,420 to 1,880 cfs, forecast middle peaking near 2,360 cfs on May 12, above the 2,200 cfs flood flow"><g font-family="Arial" font-size="11" fill="#4A4A4A">${grid}${xl}</g>
+    <path d="${band}" fill="rgba(0,71,186,.16)"/>
+    <line x1="${L}" x2="${W-R}" y1="${y(2200)}" y2="${y(2200)}" stroke="#9A5B00" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="${L+4}" y="${y(2200)+14}" font-family="Arial" font-size="11" fill="#9A5B00" font-weight="700">Flood flow 2,200</text>
+    <line x1="${L}" x2="${W-R}" y1="${y(2700)}" y2="${y(2700)}" stroke="#7C878E" stroke-width="1" stroke-dasharray="2 3"/>
+    <text x="${L+4}" y="${y(2700)-5}" font-family="Arial" font-size="11" fill="#4A4A4A">2023 peak 2,700</text>
+    <line x1="${x(5)}" x2="${x(5)}" y1="${T}" y2="${H-B}" stroke="#BFC5CA"/>
+    <path d="${oLine}" fill="none" stroke="#1F1F1F" stroke-width="2.5"/>
+    <path d="${mLine}" fill="none" stroke="#0047BA" stroke-width="2.5"/>
+    <circle cx="${x(5)}" cy="${y(1880)}" r="4" fill="#1F1F1F"/>
+    <circle cx="${x(11)}" cy="${y(2360)}" r="4" fill="#0047BA"/>
+    <text x="${x(11)}" y="${y(2360)-10}" text-anchor="middle" font-family="Arial" font-size="11" fill="#0047BA" font-weight="700">Peak about 2,360 on May 12</text>
+  </svg>`;
+
+  // ---------- feeding bars ----------
+  const BARS = [["Snowpack left to melt","145% of normal",100],["Sevier Bridge Reservoir","97% full",97],["DMAD Reservoir","92% full",92],["Gunnison Bend Reservoir","88% full",88]];
+  document.getElementById("bars").innerHTML = BARS.map(([n,t,p]) => `<div class="bar"><div class="row"><span>${n}</span><b>${t}</b></div><div class="track"><div class="fill" style="width:${p}%"></div></div></div>`).join("");
+
+  // ---------- report form ----------
+  document.getElementById("reportForm").addEventListener("submit", e => { e.preventDefault(); document.getElementById("rok").hidden = false; });
+
+  // ---------- QR placeholder (decorative, not a real code) ----------
+  let s = 7, cells = "";
+  const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const finder = (cx,cy) => `<rect x="${cx}" y="${cy}" width="7" height="7" fill="#1F1F1F"/><rect x="${cx+1}" y="${cy+1}" width="5" height="5" fill="#fff"/><rect x="${cx+2}" y="${cy+2}" width="3" height="3" fill="#1F1F1F"/>`;
+  for (let r = 0; r < 25; r++) for (let c = 0; c < 25; c++){
+    const inF = (r<8&&c<8)||(r<8&&c>16)||(r>16&&c<8);
+    if (!inF && rnd() > 0.52) cells += `<rect x="${c}" y="${r}" width="1" height="1"/>`;
+  }
+  document.getElementById("qr").innerHTML = `<rect width="25" height="25" fill="#fff"/><g fill="#1F1F1F">${cells}</g>${finder(0,0)}${finder(18,0)}${finder(0,18)}`;
+})();
+</script>
+
+</body>
+</html>
