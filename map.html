@@ -180,7 +180,20 @@ section{scroll-margin-top:72px}
 .pn a:hover{border-color:var(--navy);background:var(--panel)}
 .pn .next{margin-left:auto}
 
+/* upstream camera */
+.cam .camgrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:start}
+.camfig{margin:0;display:grid;gap:6px}
+.camfig img{width:100%;height:auto;display:block;border-radius:4px;border:1px solid var(--paper-rule)}
+.camside{display:grid;gap:10px;font-size:13px;min-width:0}
+.camread{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.camread > div:not(.sub){background:var(--paper-soft);border-radius:6px;padding:8px 10px;display:grid}
+.camread span{font-size:11.5px;color:var(--paper-gray)}
+.camread b{font-size:18px;color:var(--paper-navy);font-variant-numeric:tabular-nums}
+.camread .sub{grid-column:1 / -1}
+.live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#1E6B3A;margin-right:6px;vertical-align:middle}
+
 @media (max-width:860px){
+  .cam .camgrid{grid-template-columns:minmax(0,1fr)}
   .sum{grid-template-columns:minmax(0,1fr)} .cards{position:static}
   .tsp{grid-template-columns:minmax(0,1fr)}
   .mock,.cardrow{grid-template-columns:minmax(0,1fr)}
@@ -352,6 +365,35 @@ section{scroll-margin-top:72px}
   // ---------- report form ----------
   if ($("reportForm")) $("reportForm").addEventListener("submit", e => { e.preventDefault(); document.getElementById("rok").hidden = false; });
 
+
+
+  // ---------- upstream camera: live image and readings where the host allows, saved snapshot otherwise ----------
+  if ($("camImg")){
+    const CAM = "https://usgs-nims-images.s3.amazonaws.com/overlay/UT_North_Fork_Virgin_River_near_Springdale/UT_North_Fork_Virgin_River_near_Springdale_newest.jpg";
+    const loadCam = () => {
+      const probe = new Image();
+      probe.onload = () => {
+        $("camImg").src = probe.src;
+        $("camStatus").innerHTML = '<span class="live-dot"></span>Live image from USGS, refreshed every 10 minutes. The time is stamped in the photo.';
+      };
+      probe.src = CAM + "?t=" + Date.now();
+    };
+    loadCam(); setInterval(loadCam, 10 * 60 * 1000);
+    fetch("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09405500&parameterCd=00060,00065&siteStatus=all")
+      .then(r => r.json())
+      .then(d => {
+        let when = "";
+        d.value.timeSeries.forEach(ts => {
+          const code = ts.variable.variableCode[0].value, last = ts.values[0].value.slice(-1)[0];
+          if (!last) return;
+          when = last.dateTime;
+          if (code === "00065") $("camGh").textContent = (+last.value).toFixed(2) + " ft";
+          if (code === "00060") $("camQ").textContent = (+last.value).toLocaleString() + " cfs";
+        });
+        if (when) $("camTime").innerHTML = '<span class="live-dot"></span>Live reading, ' + new Date(when).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"});
+      })
+      .catch(() => {});
+  }
 
   // ---------- QR placeholder (decorative, not a real code) ----------
   let s = 7, cells = "";
